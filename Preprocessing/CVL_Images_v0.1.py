@@ -29,17 +29,17 @@ def Preprocessing(in_path, out_path, filters_dir):
 
         horizontal = np.split(resized, 4, axis=1)
 
-        for idx, h in enumerate(horizontal_256, start=1):
+        for idx, h in enumerate(horizontal, start=1):
 
             vertical = np.split(h, 4, axis=0)
 
-            for ind, v in enumerate(vertical_256, start=1):
+            for ind, v in enumerate(vertical, start=1):
 
                 thv, denv = cv2.threshold(v, 55, 255, cv2.THRESH_TOZERO)
 
                 filtered = []
 
-                for kern in kernels_256:
+                for kern in kernels:
 
                     kernel = cv2.imread(kern, 0)
 
