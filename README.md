@@ -50,4 +50,4 @@
 
       * There is a column containing image paths and there are one hot encoded: 145 columns referring to the authors' IDs; 2 columns referring to the authors' gender and handedness; 18 columns referring to the indicative features.
         
-      * Around 20% of each author's document patches were randomly selected for models' testing and validation, while the remainder was utilized for models' training.
+      * Around 20% of each author's document patches were randomly sampled for models' testing and validation, while the remainder was utilized for models' training.
