@@ -6,9 +6,9 @@
 
 * #### 0.2. Versioning and identifiers (e.g. vX.Y.Z):
 
-    * X indicates the model version;
-    * Y indicates the method of preprocessing;
-    * Z indicates any extra variation of the given X.Y base combination.
+    * X indicates the model version (otherwise 0);
+    * Y indicates the method of preprocessing (otherwise 0);
+    * Z indicates any extra variation of the given X.Y base combination (otherwise omitted).
 
 * #### 0.4. Keywords:
 
