@@ -1,4 +1,3 @@
-import glob
 import os
 import cv2
 import numpy as np
@@ -9,10 +8,11 @@ def Preprocessing(in_path, out_path, filters_dir):
     k_names = os.listdir(filters_dir)
     kernels = [filters_dir + n for n in k_names]
 
-    os.chdir(in_path)
-    tifs = glob.glob('*.tif')
+    img_names = os.listdir(in_path)
+    img_paths = [in_path + n for n in img_names]
+    listed = zip(img_paths, img_names)
 
-    for j in tqdm(tifs, desc='cvl-loop'):
+    for j, i in tqdm(listed, total=len(img_paths), desc='cvl-loop'):
 
         img = cv2.imread(j, 0)
 
@@ -29,17 +29,17 @@ def Preprocessing(in_path, out_path, filters_dir):
 
         horizontal = np.split(resized, 4, axis=1)
 
-        for idx, h in enumerate(horizontal, start=1):
+        for idx, h in enumerate(horizontal_256, start=1):
 
             vertical = np.split(h, 4, axis=0)
 
-            for ind, v in enumerate(vertical, start=1):
+            for ind, v in enumerate(vertical_256, start=1):
 
                 thv, denv = cv2.threshold(v, 55, 255, cv2.THRESH_TOZERO)
 
                 filtered = []
 
-                for kern in kernels:
+                for kern in kernels_256:
 
                     kernel = cv2.imread(kern, 0)
 
@@ -49,7 +49,7 @@ def Preprocessing(in_path, out_path, filters_dir):
 
                 if 0 not in filtered:
 
-                    cv2.imwrite(out_path + 'cvl-' + j[:-4] + '-' + str(idx) + str(ind) + '.png', v)
+                    cv2.imwrite(out_path + 'cvl-' + i[:-4] + '-' + str(idx) + str(ind) + '.png', v)
 
                 else:
 
