@@ -32,7 +32,7 @@
 
     * Overall there were 403 documents by 145 writers; IAM: 118 documents by 214 writers; CLV: 27 documents by 189 writers.
     
-    * Databases spcific dataframes of features and categories are available at the /Dataframes/ folder (within other dataframes these features are labelled).
+    * Dataframes of handwriting features, categories and labels are available at the /Dataframes/ folder.
     
   * 0.5.3. Preprocessed data:
 
@@ -48,7 +48,7 @@
 
     * 0.5.4.1. Dataframing v0.1:
 
-      * There is a column containing image paths and there are 145 one hot encoded columns referring to subsequent authors' IDs.
+      * There is a column containing image paths and there are one hot encoded: 145 columns referring to the authors' IDs; 2 columns referring to the authors' gender and handedness; 18 columns referring to the indicative features.
     
       * Around 80% of each author's document extracts or patches were utilized for models' training. 
     
