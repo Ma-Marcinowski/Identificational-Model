@@ -42,6 +42,8 @@
       
       * Patches which do not contain or contain only small amounts of text are omitted (vide /Preprocessing/Filters/ folder ).
 
+      * Overall there were 3384 patches (2018 IAM and 1366 CLV).
+
   * 0.5.4. Dataframed data:
 
     * 0.5.4.1. Dataframing v0.1:
