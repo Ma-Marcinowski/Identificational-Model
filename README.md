@@ -48,7 +48,7 @@
 
     * 0.5.4.1. Dataframing v0.1:
 
-      * There is a column containing image paths and 145 one hot encoded authors' columns.
+      * There is a column containing image paths and there are 145 one hot encoded columns of authors' ID.
     
       * Around 80% of each author's document extracts or patches were utilized for models' training. 
     
