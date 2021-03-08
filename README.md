@@ -49,7 +49,5 @@
     * 0.5.4.1. Dataframing v0.1:
 
       * There is a column containing image paths and there are one hot encoded: 145 columns referring to the authors' IDs; 2 columns referring to the authors' gender and handedness; 18 columns referring to the indicative features.
-    
-      * Around 80% of each author's document extracts or patches were utilized for models' training. 
-    
-      * Around 20% of each author's document extracts or patches were utilized for models' testing and validation.
+        
+      * Around 20% of each author's document patches were randomly selected for models' testing and validation, while the remainder was utilized for models' training.
