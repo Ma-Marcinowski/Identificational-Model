@@ -32,7 +32,7 @@
 
     * Overall there were 403 documents by 145 writers; IAM: 118 documents by 214 writers; CLV: 27 documents by 189 writers.
     
-    * Databases spcific dataframes of features and categories are available at the /Categories/ folder (within other dataframes these features are labelled).
+    * Databases spcific dataframes of features and categories are available at the /Dataframes/ folder (within other dataframes these features are labelled).
     
   * 0.5.3. Preprocessed data:
 
