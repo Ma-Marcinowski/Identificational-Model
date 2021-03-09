@@ -8,7 +8,7 @@
 
     * X indicates the model version (otherwise 0);
     * Y indicates the method of preprocessing (otherwise 0);
-    * Z indicates any extra variation of the given X.Y base combination (otherwise omitted).
+    * Z indicates any extra variation of the given X.Y base combination (otherwise 0 or omitted).
 
 * #### 0.4. Keywords:
 
