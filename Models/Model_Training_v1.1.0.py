@@ -84,7 +84,7 @@ def CoreNet(ix):
     x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
     ox = tf.keras.layers.GlobalAveragePooling2D(name='1stGAP')(x)
 
-    return ox
+    return 
 
 interm = CoreNet(ix=input)
 
