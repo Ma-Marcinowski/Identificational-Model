@@ -101,7 +101,7 @@
 
 * #### 1.3. Training (available at the /Models/Model_Training_v1.1.0.py):
 
-    * Lasted - 90 epochs.
+    * Lasted - 60 epochs.
     
     * Training log available at the /Logs/Model_v1.1.0_Training_Log.csv.
 
