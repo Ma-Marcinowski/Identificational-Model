@@ -2,7 +2,7 @@
 
 ### 0. Introduction
 
-* #### 0.1. Objective of the author's repository was to introduce multiple - varying in terms of interpretability - methods for identification of offline handwritten documents authors by artificial neural networks. The purpose of these approaches was to create an empirical background for analyses of interpretable machine learning tools developed in the field of computational forensics.
+* #### 0.1. Objective of the author's repository was to introduce multiple - varying in terms of interpretability - methods for identification of offline handwritten documents' authors by artificial neural networks. The purpose of these approaches was to create an empirical background for analyses of interpretable machine learning tools developed in the field of computational forensics.
 
 * #### 0.2. Versioning and identifiers (e.g. vX.Y.Z):
 
