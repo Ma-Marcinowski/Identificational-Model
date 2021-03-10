@@ -74,7 +74,7 @@
   
     * Batch normalization layers are added among the convolutional and dese layers;
 
-    ~~* Dilation of 2 is utilized at convolutional layers;~~
+    * Dilation of 2 is utilized at convolutional layers;
     
     * Global Average Pooling layer is utilized instead of the last max-pooling layer;
 
@@ -90,9 +90,9 @@
       * Initial learning rate (alpha) - 0.001 (1e-3);
       * Beta_1 , beta_2, epsilon - as recommended by: D. Kingma, J. Ba, *Adam: A Method for Stochastic Optimization*, arXiv:1412.6980v9 [cs.LG] 2017, p. 2.
       
-    * Learning Rate Reductions (automatic or manual):
+    * Learning Rate Reductions (automatic, unless manual):
       * Observing - minimal validation loss.
-      * If no improvement for - about 5/10 epochs;
+      * If no improvement for - 5 epochs;
       * Then reductions by factor - 0.1.
 
     * Initial batchsize - 32
