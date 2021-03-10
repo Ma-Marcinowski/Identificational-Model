@@ -78,7 +78,7 @@
     
     * Global Average Pooling layer is utilized instead of the last max-pooling layer;
 
-    * Dropout layers supercedeing all dense layers;
+    * Dropout layers are supercedeing all dense layers;
 
     * The last dense layer has 145 neurons.  
 
