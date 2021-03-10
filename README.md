@@ -70,11 +70,13 @@
 
   * 1.1.1. Architecture based on the VGG 16, by: K. Simonyan, A. Zisserman, *Very Deep Convolutional Networks for Large-Scale Image Recognition*, arXiv:1409.1556v6 [cs.CV] 2015, pp. 1-14.
 
-  * 1.1.2. However, there are:
+  * 1.1.2. However:
   
-    * Batch normalization layers added among the conv and dese layers;
+    * Batch normalization layers are added among the convolutional and dese layers;
+
+    ~~* Dilation of 2 is utilized at convolutional layers;~~
     
-    * Global Average Pooling layer instead of the last max-pooling layer;
+    * Global Average Pooling layer is utilized instead of the last max-pooling layer;
 
     * Dropout layers supercedeing all dense layers;
 
@@ -88,9 +90,9 @@
       * Initial learning rate (alpha) - 0.001 (1e-3);
       * Beta_1 , beta_2, epsilon - as recommended by: D. Kingma, J. Ba, *Adam: A Method for Stochastic Optimization*, arXiv:1412.6980v9 [cs.LG] 2017, p. 2.
       
-    * Learning Rate Reductions (automatic and manual):
+    * Learning Rate Reductions (automatic or manual):
       * Observing - minimal validation loss.
-      * If no improvement for about - 5/10 epochs;
+      * If no improvement for - about 5/10 epochs;
       * Then reductions by factor - 0.1.
 
     * Initial batchsize - 32
@@ -99,7 +101,7 @@
 
 * #### 1.3. Training (available at the /Models/Model_Training_v1.1.0.py):
 
-    * Lasted - 60 epochs.
+    * Lasted - 90 epochs.
     
     * Training log available at the /Logs/Model_v1.1.0_Training_Log.csv.
 
