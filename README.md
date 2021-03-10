@@ -52,6 +52,18 @@
         
       * Around 20% of each author's document patches were randomly sampled for models' testing and validation, while the remainder was utilized for models' training.
 
+  * 0.5.5. Basic evaluation metrics:
+
+    * Categorical Crossentropy - Loss;
+    * Accuracy - Acc;
+    * True Positive Rate / Sensitivity - `(TP/P)` - TPR;
+    * True Negative Rate / Specificity - `(TN/N)` - TNR;
+    * False Positive Rate - `(FP/N)` - FPR;
+    * False Negative Rate - `(FN/P)` - FNR;
+    * Positive Predictive Value - `(TP/(TP+FP))` - PPV;
+    * Negative Predictive Value - `(TN/(TN+FN))` - NPV;
+    * Area under the ROC curve - AUC.
+
 ### 1. Model v1.1.0
 
 * #### 1.1. Architecture:
@@ -68,7 +80,7 @@
 
     * The last dense layer has 145 neurons.  
 
-* #### 1.2. Hyperparameteres:
+* #### 1.2. Hyperparameteres (all training updates available at the /Logs/ folder):
 
     * Loss: Categorical Crossentropy
     
@@ -80,11 +92,25 @@
       * Observing - minimal validation loss.
       * If no improvement for - 10 epochs;
       * Then reductions by factor - 0.1.
-      
-    * Batchsize: 32
+
+    * Initial batchsize: 32
     
-    * Dropout rate: 0.25
+    * Initial dropout rate: 0.25
 
 * #### 1.3. Training:
 
+    * Lasted - 60 epochs.
+    
+    * Training log available at the /Logs/ folder.
+
+    * Results:
+    
+    | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
+    | --- | --- | --- | --- | --- |  --- |
+    | v1.1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 
+
 * #### 1.3. Testing:
+
+    | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v1.1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
