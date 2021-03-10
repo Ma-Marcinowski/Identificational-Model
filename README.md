@@ -66,7 +66,7 @@
 
 ### 1. Model v1.1.0
 
-* #### 1.1. Architecture:
+* #### 1.1. Architecture (available at the /Models/Model_Training_v1.1.0.py):
 
   * 1.1.1. Architecture based on the VGG 16, by: K. Simonyan, A. Zisserman, *Very Deep Convolutional Networks for Large-Scale Image Recognition*, arXiv:1409.1556v6 [cs.CV] 2015, pp. 1-14.
 
@@ -80,7 +80,7 @@
 
     * The last dense layer has 145 neurons.  
 
-* #### 1.2. Hyperparameteres (all training updates available at the /Logs/ folder):
+* #### 1.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1.0_Training_Log.csv):
 
     * Loss: Categorical Crossentropy
     
@@ -97,11 +97,11 @@
     
     * Initial dropout rate: 0.25
 
-* #### 1.3. Training:
+* #### 1.3. Training (available at the /Models/Model_Training_v1.1.0.py):
 
     * Lasted - 60 epochs.
     
-    * Training log available at the /Logs/ folder.
+    * Training log available at the /Logs/Model_v1.1.0_Training_Log.csv.
 
     * Results:
     
@@ -109,7 +109,7 @@
     | --- | --- | --- | --- | --- |  --- |
     | v1.1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 
 
-* #### 1.3. Testing:
+* #### 1.3. Testing (available at the /Models/Model_Testing_v1.1.0.py):
 
     | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
