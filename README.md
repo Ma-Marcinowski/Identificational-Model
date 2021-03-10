@@ -51,3 +51,40 @@
       * There is a column containing image paths and there are one hot encoded: 145 columns referring to the authors' IDs; 2 columns referring to the authors' gender and handedness; 18 columns referring to the indicative features.
         
       * Around 20% of each author's document patches were randomly sampled for models' testing and validation, while the remainder was utilized for models' training.
+
+### 1. Model v1.1.0
+
+* #### 1.1. Architecture:
+
+  * 1.1.1. Architecture based on the VGG 16, by: K. Simonyan, A. Zisserman, *Very Deep Convolutional Networks for Large-Scale Image Recognition*, arXiv:1409.1556v6 [cs.CV] 2015, pp. 1-14.
+
+  * 1.1.2. However, there are:
+  
+    * Batch normalization layers added among the conv and dese layers;
+    
+    * Global Average Pooling layer instead of the last max-pooling layer;
+
+    * Dropout layers supercedeing all dense layers;
+
+    * The last dense layer has 145 neurons.  
+
+* #### 1.2. Hyperparameteres:
+
+    * Loss: Categorical Crossentropy
+    *
+    * Optimizer - Adam (Adaptive Moment Estimation):
+      * Initial learning rate (alpha) - 0.001 (1e-3);
+      * Beta_1 , beta_2, epsilon - as recommended by: D. Kingma, J. Ba, Adam: A Method for Stochastic Optimization, arXiv:1412.6980v9 [cs.LG] 2017, p. 2.
+      *
+    * Learning Rate Reductions (automatic):
+      * Observing - minimal validation loss.
+      * If no improvement for - 10 epochs;
+      * Then reductions by factor - 0.1.
+      
+    * Batchsize: 32
+    
+    * Dropout rate: 0.25
+
+* #### 1.3. Training:
+
+* #### 1.3. Testing:
