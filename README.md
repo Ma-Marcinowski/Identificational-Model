@@ -71,7 +71,7 @@
 * #### 1.2. Hyperparameteres:
 
     * Loss: Categorical Crossentropy
-    *
+    
     * Optimizer - Adam (Adaptive Moment Estimation):
       * Initial learning rate (alpha) - 0.001 (1e-3);
       * Beta_1 , beta_2, epsilon - as recommended by: D. Kingma, J. Ba, Adam: A Method for Stochastic Optimization, arXiv:1412.6980v9 [cs.LG] 2017, p. 2.
