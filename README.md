@@ -137,7 +137,7 @@
 
 * #### 2.3. Training (available at the /Models/Model_Training_v1.1.1.py):
 
-    * Lasted - ??? epochs.
+    * Lasted - 60 epochs.
     
     * Training log available at the /Logs/Model_v1.1.1_Training_Log.csv.
 
@@ -145,7 +145,7 @@
     
     | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
     | --- | --- | --- | --- | --- |  --- |
-    | v1.1.1 | ??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v1.1.1 | 51 | 0.7881 | 0.8940 | 1.3174| 0.6966  | 
 
 * #### 2.3. Testing (available at the /Models/Model_Testing_v1.1.1.py):
 
