@@ -145,7 +145,7 @@
     
     | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
     | --- | --- | --- | --- | --- |  --- |
-    | v1.1.1 | 51 | 0.7881 | 0.8940 | 1.3174| 0.6966  | 
+    | v1.1.1 | 51 | 0.8940 | 0.7881 | 1.3174| 0.6966  | 
 
 * #### 2.3. Testing (available at the /Models/Model_Testing_v1.1.1.py):
 
