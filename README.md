@@ -116,3 +116,39 @@
     | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v1.1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+    
+### 2. Model v1.1.1
+
+* #### 2.1. Architecture (available at the /Models/Model_Training_v1.1.1.py):
+
+  * Vide 1.1.1. Architecture.
+
+  * However:
+  
+    * There is an additional dense layer of 20 neurons in-between the 2nd and the output dense layer.
+
+* #### 2.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1.1_Training_Log.csv):
+
+    * Vide 1.2. Hyperparameteres.
+
+    * However: 
+    
+       * Initial dropout rate - 0.0.
+
+* #### 2.3. Training (available at the /Models/Model_Training_v1.1.1.py):
+
+    * Lasted - ??? epochs.
+    
+    * Training log available at the /Logs/Model_v1.1.1_Training_Log.csv.
+
+    * Results:
+    
+    | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
+    | --- | --- | --- | --- | --- |  --- |
+    | v1.1.1 | ??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+
+* #### 2.3. Testing (available at the /Models/Model_Testing_v1.1.1.py):
+
+    | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v1.1.1 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
