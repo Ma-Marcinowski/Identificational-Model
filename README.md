@@ -76,7 +76,7 @@
 
     * Dilation of 2 is utilized at convolutional layers;
     
-    * Global Average Pooling layer is utilized instead of the last max-pooling layer;
+    * Global Average Pooling layer is applied instead of the last max-pooling layer;
 
     * Dropout layers are supercedeing all dense layers;
 
