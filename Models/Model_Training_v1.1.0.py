@@ -37,7 +37,7 @@ class DataSequence(tf.keras.utils.Sequence):
         batch_y = self.get_batch_labels(idx)
         return ({'input': batch_x}, {'output': batch_y})
 
-BatchSize = 128
+BatchSize = 32
 
 TrainSeq = DataSequence(dataframe='/path/TrainSheet.csv', batch_size = BatchSize)
 ValidSeq = DataSequence(dataframe='/path/TestSheet.csv', batch_size = BatchSize)
