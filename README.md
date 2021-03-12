@@ -64,7 +64,7 @@
     * Negative Predictive Value - `(TN/(TN+FN))` - NPV;
     * Area under the ROC curve - AUC.
 
-### 1. Model v1.1.0
+### 1. Model v1.1.0 (plain model, author identification)
 
 * #### 1.1. Architecture (available at the /Models/Model_Training_v1.1.0.py):
 
@@ -117,7 +117,7 @@
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v1.1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
     
-### 2. Model v1.1.1
+### 2. Model v1.1.1 (comparative model, author identification)
 
 * #### 2.1. Architecture (available at the /Models/Model_Training_v1.1.1.py):
 
@@ -153,8 +153,8 @@
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v1.1.1 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
     
-### 3. Model v2.1.0
-### 4. Model v2.1.1
-### 5. Model v3.1.0
-
-
+### 3. Model v2.1.0 (plain model, author identification and categorization)
+### 4. Model v2.1.1 (comparative model, author identification and categorization)
+### 5. Model v3.1.0 (partial model, features extraction)
+### 6. Model v3.1.1 (partial model, features extraction to author categorization)
+### 7. Model v4.1.0 (main model, features extraction to author identification and categorization)
