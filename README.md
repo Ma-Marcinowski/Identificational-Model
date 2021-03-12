@@ -20,11 +20,13 @@
      
      * Vide 4. Model v2.1.1 (comparative model, author identification and categorization);
      
-     * Vide 5. Model v3.1.0 (partial model, features extraction);
+     * Vide 5. Model v3.1.0 (partial model, features extraction and author categorization);
      
      * Vide 6. Model v3.1.1 (partial model, features extraction to author categorization);
-     
-     * **Vide 7. Model v4.1.0 (main model, features extraction to author identification and categorization)**.
+
+     * **Vide 7. Model v4.1.0 (main model, features extraction and author categorization to author identification);**
+
+     * Vide 8. Model v4.1.1 (main model, features extraction to author identification and categorization).
 
 * #### 0.4. Keywords:
 
@@ -171,6 +173,7 @@
     
 ### 3. Model v2.1.0 (plain model, author identification and categorization)
 ### 4. Model v2.1.1 (comparative model, author identification and categorization)
-### 5. Model v3.1.0 (partial model, features extraction)
+### 5. Model v3.1.0 (partial model, features extraction and author categorization)
 ### 6. Model v3.1.1 (partial model, features extraction to author categorization)
-### 7. Model v4.1.0 (main model, features extraction to author identification and categorization)
+### 7. Model v4.1.0 (main model, features extraction and author categorization to author identification)
+### 8. Model v4.1.1 (main model, features extraction to author identification and categorization)
