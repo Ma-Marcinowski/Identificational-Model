@@ -10,6 +10,22 @@
     * Y indicates the method of preprocessing (otherwise 0);
     * Z indicates any extra variation of the given X.Y base combination (otherwise 0 or omitted).
 
+* #### 0.3. Models:
+
+     * Vide 1. Model v1.1.0 (plain model, author identification);
+     
+     * Vide 2. Model v1.1.1 (comparative model, author identification);
+     
+     * 3. Model v2.1.0 (plain model, author identification and categorization);
+     *
+     * 4. Model v2.1.1 (comparative model, author identification and categorization);
+     
+     * 5. Model v3.1.0 (partial model, features extraction);
+     
+     * 6. Model v3.1.1 (partial model, features extraction to author categorization);
+     
+     * **7. Model v4.1.0 (main model, features extraction to author identification and categorization)**.
+
 * #### 0.4. Keywords:
 
     * Computational, statistical, probabilistic; 
