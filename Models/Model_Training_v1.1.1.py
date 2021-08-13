@@ -18,7 +18,7 @@ class DataSequence(tf.keras.utils.Sequence):
         self.batch_size = batch_size
 
         self.heads = self.df.columns.tolist()
-        self.labels = self.df[self.heads[1:146]].values
+        self.labels = self.df[self.heads[1:28]].values
         self.path_names = self.df['image_paths'].tolist()
 
     def __len__(self):
