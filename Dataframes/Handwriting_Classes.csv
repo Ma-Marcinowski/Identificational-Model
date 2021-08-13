@@ -1,0 +1,80 @@
+Authors,Identities,cvl-0001,,Categories,Gender,Feminine,category-01,,Features,"Fluency, neatness and quality",High,Feminine,feature-01
+,,cvl-0002,,,,Masculine,category-02,,,,Moderate,,feature-02
+,,cvl-0003,,,Handedness,Sinistral,category-03,,,,Low,Masculine,feature-03
+,,cvl-0004,,,,Dextral,category-04,,,Class of allograph,Cursive,,feature-04
+,,cvl-0005,,,,,,,,,Script,,feature-05
+,,cvl-0006,,,,,,,,,Hand printed (or block lettered),Feminine,feature-06
+,,cvl-0012,,,,,,,,Shape of allographs,Circular (or bubbly),Feminine,feature-07
+,,cvl-0013,,,,,,,,,Oval,,feature-08
+,,cvl-0014,,,,,,,,,Angular,Masculine,feature-09
+,,cvl-0015,,,,,,,,Intraword connections,Arched (clockwise),Sinistral,feature-10
+,,cvl-0016,,,,,,,,,Garlanded (anticlockwise),,feature-11
+,,cvl-0017,,,,,,,,,Angular,Masculine,feature-12
+,,cvl-0018,,,,,,,,,Contact,,feature-13
+,,cvl-0020,,,,,,,,,Disconnected,,feature-14
+,,cvl-0021,,,,,,,,Writing lines continuous at the level of,Strokes,,feature-15
+,,cvl-0022,,,,,,,,,Letters,,feature-16
+,,cvl-0023,,,,,,,,,Syllables,,feature-17
+,,cvl-0024,,,,,,,,,Words,,feature-18
+,,cvl-0025,,,,,,,,Parallelism of writing lines,Parallel ,,feature-19
+,,cvl-0026,,,,,,,,,Divergent ,,feature-20
+,,cvl-0027,,,,,,,,,Convergent ,,feature-21
+,,cvl-0028,,,,,,,,,Irregular parallelism,,feature-22
+,,cvl-0029,,,,,,,,Baseline shape,Straight,,feature-23
+,,cvl-0041,,,,,,,,,Broken,,feature-24
+,,cvl-0042,,,,,,,,,Waved,,feature-25
+,,cvl-0047,,,,,,,,,Arched (clockwise),,feature-26
+,,cvl-0050,,,,,,,,,Garlanded (anticlockwise),,feature-27
+,,,,,,,,,,Baseline direction (slope of writing line),Ascending (left-skewed),,feature-28
+,,,,,,,,,,,Horizontal (horizontal),,feature-29
+,,,,,,,,,,,Descending (right-skewed),,feature-30
+,,,,,,,,,,Slant of letters,Backhand,Sinistral,feature-31
+,,,,,,,,,,,Vertical,Sinistral,feature-32
+,,,,,,,,,,,Moderate forehand,,feature-33
+,,,,,,,,,,,Heavy forehand (more than 70 degrees),Masculine,feature-34
+,,,,,,,,,,Quality of the slant,Uniform degree,Feminine,feature-35
+,,,,,,,,,,,Varying degree,,feature-36
+,,,,,,,,,,,Alternating slant,Sinistral,feature-37
+,,,,,,,,,,Size,Small,Masculine,feature-38
+,,,,,,,,,,,"Moderate (minuscules from 1,5 to 4,0 mm )",,feature-39
+,,,,,,,,,,,Large,Masculine,feature-40
+,,,,,,,,,,Interline spacing,Small ,,feature-41
+,,,,,,,,,,,Moderate (three times minuscules size),,feature-42
+,,,,,,,,,,,Large,,feature-43
+,,,,,,,,,,Interword spacing,Small,,feature-44
+,,,,,,,,,,,Moderate (two times minuscules size),,feature-45
+,,,,,,,,,,,Large,,feature-46
+,,,,,,,,,,Intraword spacing,Small,,feature-47
+,,,,,,,,,,,"Moderate (equal to width of h, n, u letters)",,feature-48
+,,,,,,,,,,,Large,,feature-49
+,,,,,,,,,,Proportions of supralinear elements to minuscules,"Reduced (up to 1,5 times size)",,feature-50
+,,,,,,,,,,,"Proportional (from 1,5 to 2,5 times size)",,feature-51
+,,,,,,,,,,,"Enlarged (above 2,5 times size)",,feature-52
+,,,,,,,,,,Proportions of infralinear elements to minuscules,"Reduced (up to 1,5 times size)",,feature-53
+,,,,,,,,,,,"Proportional (from 1,5 to 2,5 times size)",,feature-54
+,,,,,,,,,,,"Enlarged (above 2,5 times size)",,feature-55
+,,,,,,,,,,Horizontal lines,Executed from right to left,Sinistral,feature-56
+,,,,,,,,,,,Executed from left to right,,feature-57
+,,,,,,,,,,Vertical lines ,Executed up to down,,feature-58
+,,,,,,,,,,,Executed down to up,,feature-59
+,,,,,,,,,,Circular forms,Executed clockwise,Sinistral,feature-60
+,,,,,,,,,,,Executed anticlockwise,,feature-61
+,,,,,,,,,,Commencements,Upwards and to the left,,feature-62
+,,,,,,,,,,,Upwards and to the right,,feature-63
+,,,,,,,,,,,Downwards and to the left,,feature-64
+,,,,,,,,,,,Downwards and to the right,,feature-65
+,,,,,,,,,,Terminations,Upwards and to the left,Sinistral,feature-66
+,,,,,,,,,,,Upwards and to the right,,feature-67
+,,,,,,,,,,,Downwards and to the left,,feature-68
+,,,,,,,,,,,Downwards and to the right,,feature-69
+,,,,,,,,,,"Pressure, shading and jabbing",Higher,Masculine,feature-70
+,,,,,,,,,,,Moderate,,feature-71
+,,,,,,,,,,,Lower,,feature-72
+,,,,,,,,,,Direction of pressure and shading,Heavier pressure on up-strokes,Sinistral,feature-73
+,,,,,,,,,,,Heavier pressure on down-strokes,,feature-74
+,,,,,,,,,,,Heavier pressure on left-strokes,,feature-75
+,,,,,,,,,,,Heavier pressure on right-strokes,,feature-76
+,,,,,,,,,,Diacritics,Dashed “i” ,Masculine,feature-77
+,,,,,,,,,,,Doted “i” ,,feature-78
+,,,,,,,,,,,Circular “I”,,feature-79
+,,,,,,,,,,Other,Mannerisms or embellishments,Feminine,feature-80
