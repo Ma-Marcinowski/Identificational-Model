@@ -57,6 +57,6 @@ def Preprocessing(in_path, out_path, filters_dir):
 
     print('CVL preprocessing done: 100%')
 
-CVL_Preprocessing = Preprocessing(in_path='/path/to/CVL/raw/images/',
-                                  out_path='path/to/CVL/preprocessed/images/',
-                                  filters_dir='/path/to/filters/folder/')
+Preprocessing = Preprocessing(in_path='/path/to/CVL/raw/images/',
+                              out_path='path/to/CVL/preprocessed/images/',
+                              filters_dir='/path/to/filters/folder/')
