@@ -28,15 +28,17 @@
 
      * Models restricted by supervised features extraction, tasked with author identification (type v2):
 
-        * Vide 7. Model v2.1 (two FC layers, the second one restricted);
+        * Vide 7. Model v2.0 (two FC layers, the second one only partially restricted);
+
+        * Vide 8. Model v2.1 (two FC layers, the second one restricted);
      
-        * Vide 8. Model v2.2 (three FC layers, the third one restricted);
+        * Vide 9. Model v2.2 (three FC layers, the third one restricted);
 
-        * Vide 9. Model v2.3 (three FC layers, the first and third one restricted);
+        * Vide 10. Model v2.3 (three FC layers, the first and third one restricted);
 
-        * Vide 10. Model v2.4 (three FC layers, all restricted);
+        * Vide 11. Model v2.4 (three FC layers, all restricted);
 
-        * Vide 11. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted).
+        * Vide 12. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted).
 
      
 * #### 0.4. Keywords:
