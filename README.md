@@ -11,32 +11,32 @@
 
 * #### 0.3. Models (VGG16):
 
-     * Models unrestricted in terms of features extracted (type v1):
+     * Models unrestricted in terms of features extracted, tasked with author identification (type v1):
      
-         * Vide 1. Model v1.0 (two FC layers; tasked with author identification);
+         * Vide 1. Model v1.0 (two FC layers);
      
-         * Vide 2. Model v1.1 (two FC layers, but analogous in size to the v2.1; tasked with author identification);
+         * Vide 2. Model v1.1 (two FC layers, but analogous in size to the v2.1);
 
-         * Vide 3. Model v1.2 (three FC layers, but analogous in size to the v2.2; tasked with author identification);
+         * Vide 3. Model v1.2 (three FC layers, but analogous in size to the v2.2);
 
-         * Vide 4. Model v1.3 (three FC layers, but analogous in size to the v2.3; tasked with author identification);
+         * Vide 4. Model v1.3 (three FC layers, but analogous in size to the v2.3);
 
-         * Vide 5. Model v1.4 (three FC layers, but analogous in size to the v2.4; tasked with author identification);
+         * Vide 5. Model v1.4 (three FC layers, but analogous in size to the v2.4);
 
          * Vide 6. Model v1.5 (two FC layers; tasked with author identification and features extraction);
          
 
-     * Models restricted in terms of features extracted (type v2):
+     * Models restricted by supervised features extraction, tasked with author identification (type v2):
 
-        * Vide 7. Model v2.1 (two FC layers, the second one restricted by supervised features extraction; tasked with author identification);
+        * Vide 7. Model v2.1 (two FC layers, the second one restricted);
      
-        * Vide 8. Model v2.2 (three FC layers, the third one restricted by supervised features extraction; tasked with author identification);
+        * Vide 8. Model v2.2 (three FC layers, the third one restricted);
 
-        * Vide 9. Model v2.3 (three FC layers, the first and third one restricted by supervised features extraction; tasked with author identification);
+        * Vide 9. Model v2.3 (three FC layers, the first and third one restricted);
 
-        * Vide 10. Model v2.4 (three FC layers, all restricted by supervised features extraction; tasked with author identification);
+        * Vide 10. Model v2.4 (three FC layers, all restricted);
 
-        * Vide 11. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted; tasked with author identification);
+        * Vide 11. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted).
 
      
 * #### 0.4. Keywords:
