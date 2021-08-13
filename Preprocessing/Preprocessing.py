@@ -59,4 +59,4 @@ def Preprocessing(in_path, out_path, filters_dir):
 
 Preprocessing = Preprocessing(in_path='/path/to/CVL/raw/images/',
                               out_path='path/to/CVL/preprocessed/images/',
-                              filters_dir='/path/to/filters/folder/')
+                              filters_dir='/path/to/filters/folder/' )
