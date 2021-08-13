@@ -4,34 +4,41 @@
 
 * #### 0.1. Objective of the author's repository was to introduce multiple - varying in terms of interpretability - methods for identification of offline handwritten documents' authors by artificial neural networks. The purpose of these approaches was to create an empirical background for analysis of machine learning tools developed in the field of computational forensics in terms of their interpretability.
 
-* #### 0.2. Versioning and identifiers (e.g. vX.Y.Z):
+* #### 0.2. Versioning and identifiers (e.g. vX.Y):
 
-    * X indicates the model version (otherwise 0);
-    * Y indicates the method of preprocessing (otherwise 0);
-    * Z indicates any extra variation of the given X.Y base combination (otherwise 0 or omitted).
+    * X indicates the overall type of the model;
+    * Y identifies the given variant of the model.
 
-* #### 0.3. Models:
+* #### 0.3. Models (VGG16):
 
-     * Vide 1. Model v1.1.0 (plain model, author identification);
+     * Models unrestricted in terms of features extracted (type v1):
      
-     * Vide 2. Model v1.1.1 (comparative model, author identification);
+         * Vide 1. Model v1.0 (two FC layers; tasked with author identification);
      
-     * Vide 3. Model v2.1.0 (plain model, author identification and categorization);
-     
-     * Vide 4. Model v2.1.1 (comparative model, author identification and categorization);
+         * Vide 2. Model v1.1 (two FC layers, but analogous in size to the v2.1; tasked with author identification);
 
-     * Vide 5. Model v3.1.0 (plain model, features extraction and author identification and categorization);
-     
-     * Vide 6. Model v3.1.1 (comparative model, features extraction and author identification and categorization);
-     
-     * Vide 7. Model v4.1.0 (partial model, features extraction and author categorization);
-     
-     * Vide 8. Model v4.1.1 (partial model, features extraction to author categorization);
+         * Vide 3. Model v1.2 (three FC layers, but analogous in size to the v2.2; tasked with author identification);
 
-     * **Vide 9. Model v5.1.0 (main model, features extraction and author categorization to author identification);**
+         * Vide 4. Model v1.3 (three FC layers, but analogous in size to the v2.3; tasked with author identification);
 
-     * Vide 10. Model v5.1.1 (main model, features extraction to author identification and categorization).
+         * Vide 5. Model v1.4 (three FC layers, but analogous in size to the v2.4; tasked with author identification);
 
+         * Vide 6. Model v1.5 (two FC layers; tasked with author identification and features extraction);
+         
+
+     * Models restricted in terms of features extracted (type v2):
+
+        * Vide 7. Model v2.1 (two FC layers, the second one restricted by supervised features extraction; tasked with author identification);
+     
+        * Vide 8. Model v2.2 (three FC layers, the third one restricted by supervised features extraction; tasked with author identification);
+
+        * Vide 9. Model v2.3 (three FC layers, the first and third one restricted by supervised features extraction; tasked with author identification);
+
+        * Vide 10. Model v2.4 (three FC layers, all restricted by supervised features extraction; tasked with author identification);
+
+        * Vide 11. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted; tasked with author identification);
+
+     
 * #### 0.4. Keywords:
 
     * Computational, statistical, probabilistic; 
@@ -44,33 +51,27 @@
 
   * 0.5.1. Raw data:
        
-    * Dataset of 1604 documents (full page scans) from CVL database (310 writers), by: F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, p. 560 - 564;
-                
-    * Dataset of 1539 documents (full page scans) from IAM (offline handwritten documents) database (657 writers), by: U. Marti, H. Bunke, *The IAM-database: An English Sentence Database for Off-line Handwriting Recognition*, "Int'l Journal on Document Analysis and Recognition" 2002, No. 5, p. 39 - 46.
+    * Dataset of 1604 documents (full page scans) from CVL database (310 writers), by: F. Kleber, S. Fiel, M. Diem, R. Sablatnig, *CVL-Database: An Off-line Database for Writer Retrieval, Writer Identification and Word Spotting*, "In Proc. of the 12th Int. Conference on Document Analysis and Recognition (ICDAR) 2013" 2013, p. 560 - 564.
   
   * 0.5.2. Categorized data:
 
-    * Test subsets of the IAM and CVL datasets were categorized in terms of handwritting features, that are indicative of gender and handedness, for the purpose of verificational models' evaluation (https://github.com/Ma-Marcinowski/Verificational-Model).
+    * Test subset of the CVL dataset was categorized in terms of handwritting features, that were also indicative of gender and handedness, for the purpose of verificational models' evaluation (https://github.com/Ma-Marcinowski/Verificational-Model).
 
-    * Overall there were 403 documents by 145 writers; IAM: 118 documents by 214 writers; CLV: 27 documents by 189 writers.
+    * Overall there were 189 documents by 27 writers.
     
     * Dataframes of handwriting features, categories and labels are available at the /Dataframes/ folder.
     
-  * 0.5.3. Preprocessed data:
-
-    * 0.5.3.1. Preprocessing v0.1 (grayscaled, undenoised, 256x256px):
+  * 0.5.3. Preprocessing (grayscaled, undenoised, 256x256px):
 
       * Images are converted to grayscale, colour inverted, then rigid extraction of writing space is applied, reduction of extract dimensions to 1024 px on 1024 px, division of extracts into 256 px on 256 px patches, conversion from the tif to png format.
       
       * Patches which do not contain or contain only small amounts of text are omitted (vide /Preprocessing/Filters/ folder ).
 
-      * Overall there were 3384 patches (2018 IAM and 1366 CLV).
+      * Overall there were 1366 patches.
 
-  * 0.5.4. Dataframed data:
+  * 0.5.4. Dataframing:
 
-    * 0.5.4.1. Dataframing v0.1:
-
-      * There is a column containing image paths and there are one hot encoded: 145 columns referring to the authors' IDs; 2 columns referring to the authors' gender and handedness; 18 columns referring to the indicative features.
+      * There is a column containing image paths and there are one hot encoded: 27 columns referring to the authors' IDs; 4 columns referring to the authors' gender and handedness; 80 columns referring to the indicative features.
         
       * Around 20% of each author's document patches were randomly sampled for models' testing and validation, while the remainder was utilized for models' training.
 
@@ -85,6 +86,10 @@
     * Positive Predictive Value - `(TP/(TP+FP))` - PPV;
     * Negative Predictive Value - `(TN/(TN+FN))` - NPV;
     * Area under the ROC curve - AUC.
+
+
+
+
 
 ### 1. Model v1.1.0 (plain model, author identification)
 
