@@ -22,8 +22,6 @@
          * Vide 4. Model v1.3 (three FC layers, but analogous in size to the v2.3);
 
          * Vide 5. Model v1.4 (three FC layers, but analogous in size to the v2.4);
-
-         * Vide 6. Model v1.5 (two FC layers; tasked with author identification and features extraction);
          
 
      * Models restricted by supervised features extraction, tasked with author identification (type v2):
@@ -38,9 +36,12 @@
 
         * Vide 11. Model v2.4 (three FC layers, all restricted);
 
-        * Vide 12. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted).
+        * Vide 12. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted)
 
+     * Models unrestricted in terms of features extracted, but tasked with author identification and features extraction (type v3):
      
+        * Vide 12. Model v3.0 (two FC layers; tasked with author identification and features extraction).
+
 * #### 0.4. Keywords:
 
     * Computational, statistical, probabilistic; 
