@@ -105,7 +105,7 @@ x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 unrest_drop = GaussianDropout(rate=0.0)(x)
 unrestricted = Dense(4012, activation='relu', name='features')(unrest_drop)
 
-dropped = GaussianDropout(rate=0.0)(x) 
+feat_drop = GaussianDropout(rate=0.0)(x) 
 features = Dense(84, activation='relu', name='features')(feat_drop) 
 
 conc = tf.keras.layers.concatenate([features, unrestricted], axis=-1)
