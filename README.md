@@ -62,22 +62,28 @@
     * Overall there were 189 documents by 27 writers.
     
     * Dataframes of handwriting features, categories and labels are available at the /Dataframes/ folder.
+
+  * 0.5.4. Training and testing subsets:
+
+      * There were 7 documents per author, numbered 1, 2, 3, 4, 6, 7, 8.
+
+      * All documents no. 7 and 8 were sampled for models' testing and validation.
+
+      * All remaining documents (no. 1-6) were sampled for models' training.
     
-  * 0.5.3. Preprocessing (grayscaled, undenoised, 256x256px):
+  * 0.5.4. Preprocessing (grayscaled, undenoised, 256x256px):
 
       * Images are converted to grayscale, colour inverted, then rigid extraction of writing space is applied, reduction of extract dimensions to 1024 px on 1024 px, division of extracts into 256 px on 256 px patches, conversion from the tif to png format.
       
       * Patches which do not contain or contain only small amounts of text are omitted (vide /Preprocessing/Filters/ folder ).
 
-      * Overall there were 1366 patches.
+      * Overall there were 1366 patches (412 test patches and 954 training patches).
 
-  * 0.5.4. Dataframing:
+  * 0.5.5. Dataframing:
 
       * There is a column containing image paths and there are one hot encoded: 27 columns referring to the authors' IDs; 4 columns referring to the authors' gender and handedness; 80 columns referring to the indicative features.
-        
-      * Around 20% of each author's document patches were randomly sampled for models' testing and validation, while the remainder was utilized for models' training.
 
-  * 0.5.5. Basic evaluation metrics:
+  * 0.5.6. Basic evaluation metrics:
 
     * Categorical Crossentropy - Loss;
     * Accuracy - Acc;
