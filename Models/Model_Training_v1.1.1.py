@@ -97,23 +97,23 @@ x = Dense(4096, activation='relu', name='2ndFCL')(x)
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
 x = GaussianDropout(rate=0.0)(x) 
-x = Dense(20, activation='relu', name='3rdFCL')(x) 
+x = Dense(84, activation='relu', name='3rdFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
 x = GaussianDropout(rate=0.0)(x)            
-output = Dense(145, activation='softmax', name='output')(x)
+output = Dense(27, activation='softmax', name='output')(x)
 
 model = Model(inputs=[input], outputs=[output])
 
-#model = load_model(filepath='/path/IM_v1.1.1.h5', compile=True)
+#model = load_model(filepath='/path/IM_v1.1.h5', compile=True)
 
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, amsgrad=False)
 
 model.compile(optimizer=Adam, loss='categorical_crossentropy', metrics=['accuracy'])
 
-csv_logger = tf.keras.callbacks.CSVLogger('/path/IM_v1.1.1_Training_Log.csv', separator=',', append=True)
+csv_logger = tf.keras.callbacks.CSVLogger('/path/IM_v1.1_Training_Log.csv', separator=',', append=True)
 
-checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/IM_v1.1.1-{epoch:02d}-{val_accuracy:.2f}.h5',
+checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/IM_v1.1-{epoch:02d}-{val_accuracy:.2f}.h5',
                                                 monitor='val_accuracy',
                                                 verbose=1,
                                                 save_best_only=True,
@@ -142,4 +142,4 @@ history = model.fit(x=TrainSeq,
                     initial_epoch=0,
                     epochs=60)
 
-#model.save(filepath='/path/IM_v1.1.1.h5', overwrite=True, include_optimizer=True, save_format='h5')
+#model.save(filepath='/path/IM_v1.1.h5', overwrite=True, include_optimizer=True, save_format='h5')
