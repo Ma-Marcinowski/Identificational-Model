@@ -23,24 +23,23 @@
 
          * Vide 5. Model v1.4 (three FC layers, but analogous in size to the v2.4);
          
-
      * Models restricted by supervised features extraction, tasked with author identification (type v2):
 
-        * Vide 7. Model v2.0 (two FC layers, the second one only partially restricted);
+        * Vide 6. Model v2.0 (two FC layers, the second one only partially restricted);
 
-        * Vide 8. Model v2.1 (two FC layers, the second one restricted);
+        * Vide 7. Model v2.1 (two FC layers, the second one restricted);
      
-        * Vide 9. Model v2.2 (three FC layers, the third one restricted);
+        * Vide 8. Model v2.2 (three FC layers, the third one restricted);
 
-        * Vide 10. Model v2.3 (three FC layers, the first and third one restricted);
+        * Vide 9. Model v2.3 (three FC layers, the first and third one restricted);
 
-        * Vide 11. Model v2.4 (three FC layers, all restricted);
+        * Vide 10. Model v2.4 (three FC layers, all restricted);
 
-        * Vide 12. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted)
+        * Vide 11. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted)
 
-     * Models unrestricted in terms of features extracted, but tasked with author identification and features extraction (type v3):
+     * Models unrestricted in terms of features extracted, but tasked with author and features identification (type v3):
      
-        * Vide 12. Model v3.0 (two FC layers; tasked with author identification and features extraction).
+        * Vide 12. Model v3.0 (two FC layers; tasked with author and features identification).
 
 * #### 0.4. Keywords:
 
@@ -90,13 +89,9 @@
     * Negative Predictive Value - `(TN/(TN+FN))` - NPV;
     * Area under the ROC curve - AUC.
 
+### 1. Model v1.0
 
-
-
-
-### 1. Model v1.1.0 (plain model, author identification)
-
-* #### 1.1. Architecture (available at the /Models/Model_Training_v1.1.0.py):
+* #### 1.1. Architecture (available at the /Models/Model_Training_v1.0.py):
 
   * 1.1.1. Architecture based on the VGG 16, by: K. Simonyan, A. Zisserman, *Very Deep Convolutional Networks for Large-Scale Image Recognition*, arXiv:1409.1556v6 [cs.CV] 2015, pp. 1-14.
 
@@ -110,9 +105,9 @@
 
     * Dropout layers are supercedeing all dense layers;
 
-    * The last dense layer has 145 neurons.  
+    * The last dense layer has 27 neurons.  
 
-* #### 1.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1.0_Training_Log.csv):
+* #### 1.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.0_Training_Log.csv):
 
     * Loss: Categorical Crossentropy
     
@@ -129,35 +124,36 @@
     
     * Initial dropout rate - 0.25
 
-* #### 1.3. Training (available at the /Models/Model_Training_v1.1.0.py):
+* #### 1.3. Training (available at the /Models/Model_Training_v1.0.py):
 
     * Lasted - 60 epochs.
     
-    * Training log available at the /Logs/Model_v1.1.0_Training_Log.csv.
+    * Training log available at the /Logs/Model_v1.0_Training_Log.csv.
 
     * Results:
     
     | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
     | --- | --- | --- | --- | --- |  --- |
-    | v1.1.0 | 54 | 0.4011 | 0.8797 | 1.2081 | 0.8056 | 
+    | v1.0 | ??? | 0.??? | 0.??? | ?.??? | 0.??? | 
 
-* #### 1.3. Testing (available at the /Models/Model_Testing_v1.1.0.py):
+* #### 1.3. Testing (available at the /Models/Model_Testing_v1.0.py):
 
     | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v1.1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
-    
-### 2. Model v1.1.1 (comparative model, author identification)
+    | v1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
 
-* #### 2.1. Architecture (available at the /Models/Model_Training_v1.1.1.py):
+
+### 2. Model v1.1
+
+* #### 2.1. Architecture (available at the /Models/Model_Training_v1.1.py):
 
   * Vide 1.1.1. Architecture.
 
   * However:
   
-    * There is an additional dense layer of 20 neurons in-between the 2nd and the output dense layer.
+    * There is an additional dense layer of 84 neurons in-between the 2nd and the output dense layer.
 
-* #### 2.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1.1_Training_Log.csv):
+* #### 2.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1_Training_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -165,29 +161,31 @@
     
        * Initial dropout rate - 0.0.
 
-* #### 2.3. Training (available at the /Models/Model_Training_v1.1.1.py):
+* #### 2.3. Training (available at the /Models/Model_Training_v1.1.py):
 
     * Lasted - 60 epochs.
     
-    * Training log available at the /Logs/Model_v1.1.1_Training_Log.csv.
+    * Training log available at the /Logs/Model_v1.1_Training_Log.csv.
 
     * Results:
     
     | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
     | --- | --- | --- | --- | --- |  --- |
-    | v1.1.1 | 51 | 0.8940 | 0.7881 | 1.3174| 0.6966  | 
+    | v1.1 | ??? | 0.??? | 0.??? | ?.???| 0.???  | 
 
-* #### 2.3. Testing (available at the /Models/Model_Testing_v1.1.1.py):
+* #### 2.3. Testing (available at the /Models/Model_Testing_v1.1.py):
 
     | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v1.1.1 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
-    
-### 3. Model v2.1.0 (plain model, author identification and categorization)
-### 4. Model v2.1.1 (comparative model, author identification and categorization)
-### 5. Model v3.1.0 (plain model, features extraction and author identification and categorization)
-### 6. Model v3.1.1 (comparative model, features extraction and author identification and categorization)
-### 7. Model v4.1.0 (partial model, features extraction and author categorization)
-### 8. Model v4.1.1 (partial model, features extraction to author categorization)
-### 9. Model v5.1.0 (main model, features extraction and author categorization to author identification)
-### 10. Model v5.1.1 (main model, features extraction to author identification and categorization)
+    | v1.1 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+
+### 3. Model v1.2
+### 4. Model v1.3
+### 5. Model v1.4
+### 6. Model v2.0
+### 7. Model v2.1
+### 8. Model v2.2
+### 9. Model v2.3
+### 10. Model v2.4
+### 11. Model v2.5
+### 12. Model v3.0
