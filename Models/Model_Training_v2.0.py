@@ -98,12 +98,8 @@ x = GaussianDropout(rate=0.0)(interm)
 x = Dense(4096, activation='relu', name='1stFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.0)(x) 
-x = Dense(4096, activation='relu', name='2ndFCL')(x) 
-x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
-
 unrest_drop = GaussianDropout(rate=0.0)(x)
-unrestricted = Dense(4012, activation='relu', name='features')(unrest_drop)
+unrestricted = Dense(4012, activation='relu', name='unrestricted')(unrest_drop)
 
 feat_drop = GaussianDropout(rate=0.0)(x) 
 features = Dense(84, activation='relu', name='features')(feat_drop) 
