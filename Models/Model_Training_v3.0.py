@@ -18,7 +18,8 @@ class DataSequence(tf.keras.utils.Sequence):
         self.batch_size = batch_size
 
         self.heads = self.df.columns.tolist()
-        self.labels = self.df[self.heads[1:112]].values
+        self.labels = self.df[self.heads[1:28]].values
+        self.features = self.df[self.heads[28:112]].values
         self.path_names = self.df['image_paths'].tolist()
 
     def __len__(self):
@@ -27,6 +28,10 @@ class DataSequence(tf.keras.utils.Sequence):
     def get_batch_labels(self, idx):
         batch_labels = self.labels[idx * self.batch_size: (idx + 1) * self.batch_size]
         return np.array(batch_labels)
+    
+    def get_batch_features(self, idx):
+        batch_features = self.features[idx * self.batch_size: (idx + 1) * self.batch_size]
+        return np.array(batch_features)
 
     def get_batch_path_names(self, idx):
         batch_path_names = self.path_names[idx * self.batch_size: (idx + 1) * self.batch_size]
@@ -34,9 +39,10 @@ class DataSequence(tf.keras.utils.Sequence):
 
     def __getitem__(self, idx):
         batch_x = self.get_batch_path_names(idx)
-        batch_y = self.get_batch_labels(idx)
-        return ({'input': batch_x}, {'output': batch_y})
-
+        batch_y1 = self.get_batch_features(idx)
+        batch_y2 = self.get_batch_labels(idx)
+        return ({'input': batch_x}, {'features': batch_y1, 'output': batch_y2})
+    
 BatchSize = 32
 
 TrainSeq = DataSequence(dataframe='/path/TrainSheet.csv', batch_size = BatchSize)
@@ -96,10 +102,13 @@ x = GaussianDropout(rate=0.1)(x)
 x = Dense(4096, activation='relu', name='2ndFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.1)(x)            
-output = Dense(111, activation='softmax', name='output')(x)
+feat_drop = GaussianDropout(rate=0.1)(x)
+features = Dense(84, activation='sigmoid', name='features')(feat_drop) 
 
-model = Model(inputs=[input], outputs=[output])
+auth_drop = GaussianDropout(rate=0.1)(x)
+output = Dense(27, activation='softmax', name='output')(auth_drop)
+
+model = Model(inputs=[input], outputs=[features, output])
 
 #model = load_model(filepath='/path/IM_v3.0.h5', compile=True)
 
