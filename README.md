@@ -157,7 +157,7 @@
 
   * However:
   
-    * There is an additional dense layer of 84 neurons in-between the 2nd and the output dense layer.
+    * There is an additional dense layer of 84 neurons in-between the 2nd and the output dense layer (analogous to the v2.1 architecture).
 
 * #### 2.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1_Training_Log.csv):
 
@@ -195,3 +195,39 @@
 ### 10. Model v2.4
 ### 11. Model v2.5
 ### 12. Model v3.0
+
+### 12. Model v3.0
+
+* #### 12.1. Architecture (available at the /Models/Model_Training_v3.0.py):
+
+  * Vide 1.1.1. Architecture.
+
+  * However:
+  
+    * There are 111 output neurons, as the model is tasked with author and features identification.
+
+* #### 12.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.0_Training_Log.csv):
+
+    * Vide 1.2. Hyperparameteres.
+
+    `* However:` 
+    
+       ~* Initial dropout rate - 0.0.~
+
+* #### 12.3. Training (available at the /Models/Model_Training_v3.0.py):
+
+    * Lasted - 60 epochs.
+    
+    * Training log available at the /Logs/Model_v3.0_Training_Log.csv.
+
+    * Results:
+    
+    | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
+    | --- | --- | --- | --- | --- |  --- |
+    | v3.0 | ??? | 0.??? | 0.??? | ?.???| 0.???  | 
+
+* #### 12.3. Testing (available at the /Models/Model_Testing_v1.1.py):
+
+    | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v3.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
