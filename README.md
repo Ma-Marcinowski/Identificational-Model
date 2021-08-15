@@ -132,7 +132,7 @@
 
 * #### 1.3. Training (available at the /Models/Model_Training_v1.0.py):
 
-    * Lasted - 60 epochs.
+    * Lasted - ??? epochs.
     
     * Training log available at the /Logs/Model_v1.0_Training_Log.csv.
 
@@ -168,7 +168,7 @@
 
 * #### 2.3. Training (available at the /Models/Model_Training_v1.1.py):
 
-    * Lasted - 60 epochs.
+    * Lasted - ??? epochs.
     
     * Training log available at the /Logs/Model_v1.1_Training_Log.csv.
 
@@ -208,7 +208,7 @@
 
 * #### 6.3. Training (available at the /Models/Model_Training_v2.0.py):
 
-    * Lasted - 60 epochs.
+    * Lasted - ??? epochs.
     
     * Training log available at the /Logs/Model_v2.0_Training_Log.csv.
 
@@ -244,7 +244,7 @@
 
 * #### 7.3. Training (available at the /Models/Model_Training_v2.1.py):
 
-    * Lasted - 60 epochs.
+    * Lasted - ??? epochs.
     
     * Training log available at the /Logs/Model_v2.1_Training_Log.csv.
 
@@ -281,7 +281,7 @@
 
 * #### 8.3. Training (available at the /Models/Model_Training_v2.2.py):
 
-    * Lasted - 60 epochs.
+    * Lasted - ??? epochs.
     
     * Training log available at the /Logs/Model_v2.2_Training_Log.csv.
 
@@ -321,7 +321,7 @@
 
 * #### 12.3. Training (available at the /Models/Model_Training_v3.0.py):
 
-    * Lasted - 60 epochs.
+    * Lasted - ??? epochs.
     
     * Training log available at the /Logs/Model_v3.0_Training_Log.csv.
 
