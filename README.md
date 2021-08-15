@@ -148,7 +148,6 @@
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
 
-
 ### 2. Model v1.1
 
 * #### 2.1. Architecture (available at the /Models/Model_Training_v1.1.py):
@@ -188,13 +187,119 @@
 ### 3. Model v1.2
 ### 4. Model v1.3
 ### 5. Model v1.4
+
 ### 6. Model v2.0
+
+* #### 6.1. Architecture (available at the /Models/Model_Training_v2.0.py):
+
+  * Vide 1.1.1. Architecture.
+
+  * However:
+  
+    * There second layer is split - among 4012 unrestricted 84 restricted neurons (in terms of features extracted) - later concatenated and fed to the output layer.
+    
+* #### 6.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.0_Training_Log.csv):
+
+    * Vide 1.2. Hyperparameteres.
+
+    * However:
+    
+       * Initial dropout rate - 0.0.
+
+* #### 6.3. Training (available at the /Models/Model_Training_v2.0.py):
+
+    * Lasted - 60 epochs.
+    
+    * Training log available at the /Logs/Model_v2.0_Training_Log.csv.
+
+    * Results:
+    
+    | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
+    | --- | --- | --- | --- | --- |  --- |
+    | v2.0 | ??? | 0.??? | 0.??? | ?.???| 0.???  | 
+
+* #### 6.3. Testing (available at the /Models/Model_Testing_v2.0.py):
+
+    | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v2.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+
 ### 7. Model v2.1
+
+* #### 7.1. Architecture (available at the /Models/Model_Training_v2.1.py):
+
+  * Vide 1.1.1. Architecture.
+
+  * However:
+  
+    * The second FC layer consists of 84 neurons (instead of 4096), that are tasked with supervised features extraction (fed directly to the output layer, which identifies the authors).
+    
+* #### 7.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.1_Training_Log.csv):
+
+    * Vide 1.2. Hyperparameteres.
+
+    * However:
+    
+       * Initial dropout rate - 0.0.
+
+* #### 7.3. Training (available at the /Models/Model_Training_v2.1.py):
+
+    * Lasted - 60 epochs.
+    
+    * Training log available at the /Logs/Model_v2.1_Training_Log.csv.
+
+    * Results:
+    
+    | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
+    | --- | --- | --- | --- | --- |  --- |
+    | v2.1 | ??? | 0.??? | 0.??? | ?.???| 0.???  | 
+
+* #### 7.3. Testing (available at the /Models/Model_Testing_v2.1.py):
+
+    | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v2.1 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+
 ### 8. Model v2.2
+
+
+* #### 8.1. Architecture (available at the /Models/Model_Training_v2.2.py):
+
+  * Vide 1.1.1. Architecture.
+
+  * However:
+  
+    * There is and additional third FC layer of 84 neurons, tasked with supervised features extraction (fed directly to the output layer, which identifies the authors).
+    
+* #### 8.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.2_Training_Log.csv):
+
+    * Vide 1.2. Hyperparameteres.
+
+    * However:
+    
+       * Initial dropout rate - 0.0.
+
+* #### 8.3. Training (available at the /Models/Model_Training_v2.2.py):
+
+    * Lasted - 60 epochs.
+    
+    * Training log available at the /Logs/Model_v2.2_Training_Log.csv.
+
+    * Results:
+    
+    | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
+    | --- | --- | --- | --- | --- |  --- |
+    | v2.2 | ??? | 0.??? | 0.??? | ?.???| 0.???  | 
+
+* #### 7.3. Testing (available at the /Models/Model_Testing_v2.2.py):
+
+    | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v2.2 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+
 ### 9. Model v2.3
 ### 10. Model v2.4
 ### 11. Model v2.5
-### 12. Model v3.0
 
 ### 12. Model v3.0
 
@@ -226,7 +331,7 @@
     | --- | --- | --- | --- | --- |  --- |
     | v3.0 | ??? | 0.??? | 0.??? | ?.???| 0.???  | 
 
-* #### 12.3. Testing (available at the /Models/Model_Testing_v1.1.py):
+* #### 12.3. Testing (available at the /Models/Model_Testing_v3.0.py):
 
     | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
