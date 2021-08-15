@@ -118,15 +118,15 @@ model.compile(optimizer=Adam, loss='categorical_crossentropy', metrics=['accurac
 
 csv_logger = tf.keras.callbacks.CSVLogger('/path/IM_v3.0_Training_Log.csv', separator=',', append=True)
 
-checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/IM_v3.0-{epoch:02d}-{val_accuracy:.2f}.h5',
-                                                monitor='val_accuracy',
+checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/IM_v3.0-{epoch:02d}-{val_output_accuracy:.2f}.h5',
+                                                monitor='val_output_accuracy',
                                                 verbose=1,
                                                 save_best_only=True,
                                                 save_weights_only=False,
                                                 mode='max',
                                                 save_freq='epoch')
 
-reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss',
+reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_output_loss',
                                                factor=0.1,
                                                patience=5,
                                                verbose=1,
