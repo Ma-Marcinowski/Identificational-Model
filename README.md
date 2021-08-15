@@ -210,9 +210,9 @@
 
     * Vide 1.2. Hyperparameteres.
 
-    `* However:` 
+    ~~* However: ~~
     
-       ~* Initial dropout rate - 0.0.~
+       ~~* Initial dropout rate - 0.0.~~
 
 * #### 12.3. Training (available at the /Models/Model_Training_v3.0.py):
 
