@@ -136,6 +136,6 @@ history = model.fit(x=TrainSeq,
                     verbose=1,
                     validation_freq=1,
                     initial_epoch=0,
-                    epochs=60)
+                    epochs=90)
 
 #model.save(filepath='/path/IM_v1.0.h5', overwrite=True, include_optimizer=True, save_format='h5')
