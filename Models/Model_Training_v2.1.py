@@ -42,7 +42,7 @@ class DataSequence(tf.keras.utils.Sequence):
         batch_y1 = self.get_batch_features(idx)
         batch_y2 = self.get_batch_labels(idx)
         return ({'input': batch_x}, {'features': batch_y1, 'output': batch_y2})
-
+    
 BatchSize = 32
 
 TrainSeq = DataSequence(dataframe='/path/TrainSheet.csv', batch_size = BatchSize)
@@ -94,42 +94,42 @@ def CoreNet(ix):
 
 interm = CoreNet(ix=input)
 
-x = GaussianDropout(rate=0.1)(interm) 
+x = GaussianDropout(rate=0.0)(interm) 
 x = Dense(4096, activation='relu', name='1stFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.1)(x) 
+x = GaussianDropout(rate=0.0)(x) 
 x = Dense(4096, activation='relu', name='2ndFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-feat_drop = GaussianDropout(rate=0.1)(x)
-features = Dense(84, activation='sigmoid', name='features')(feat_drop) 
+x = GaussianDropout(rate=0.0)(x) 
+features = Dense(84, activation='sigmoid', name='features')(x) 
+x = BatchNormalization(axis=-1, scale=True, trainable=True)(features)
 
-auth_drop = GaussianDropout(rate=0.1)(x)
-output = Dense(27, activation='softmax', name='output')(auth_drop)
+x = GaussianDropout(rate=0.0)(x)
+output = Dense(27, activation='softmax', name='output')(x)
 
 model = Model(inputs=[input], outputs=[features, output])
 
-#model = load_model(filepath='/path/IM_v3.1.h5', compile=True)
+#model = load_model(filepath='/path/IM_v2.1.h5', compile=True)
 
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, amsgrad=False)
 
 model.compile(optimizer=Adam, 
               loss={'features': 'binary_crossentropy', 'output': 'categorical_crossentropy'}, 
-              loss_weights={'features': 1.0, 'output': 2.0}, 
               metrics=['accuracy'])
 
-csv_logger = tf.keras.callbacks.CSVLogger('/path/IM_v3.1_Training_Log.csv', separator=',', append=True)
+csv_logger = tf.keras.callbacks.CSVLogger('/path/IM_v2.1_Training_Log.csv', separator=',', append=True)
 
-checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/IM_v3.1-{epoch:02d}-{val_output_accuracy:.2f}.h5',
-                                                monitor='val_output_accuracy',
+checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='/path/IM_v2.1-{epoch:02d}-{val_accuracy:.2f}.h5',
+                                                monitor='val_accuracy',
                                                 verbose=1,
                                                 save_best_only=True,
                                                 save_weights_only=False,
                                                 mode='max',
                                                 save_freq='epoch')
 
-reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_output_loss',
+reduceLR = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss',
                                                factor=0.1,
                                                patience=5,
                                                verbose=1,
@@ -148,6 +148,6 @@ history = model.fit(x=TrainSeq,
                     verbose=1,
                     validation_freq=1,
                     initial_epoch=0,
-                    epochs=60)
+                    epochs=90)
 
-#model.save(filepath='/path/IM_v3.1.h5', overwrite=True, include_optimizer=True, save_format='h5')
+#model.save(filepath='/path/IM_v2.1.h5', overwrite=True, include_optimizer=True, save_format='h5')
