@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 from tensorflow.keras.models import Model, load_model
-from tensorflow.keras.losses import categorical_crossentropy
+from tensorflow.keras.losses import categorical_crossentropy, binary_crossentropy
 from tensorflow.keras.layers import Input, Conv2D, Dense, MaxPooling2D
 from tensorflow.keras.layers import BatchNormalization, GaussianDropout
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
@@ -103,7 +103,7 @@ x = Dense(4096, activation='relu', name='2ndFCL')(x)
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
 x = GaussianDropout(rate=0.0)(x) 
-features = Dense(84, activation='relu', name='features')(x) 
+features = Dense(84, activation='sigmoid', name='features')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(features)
 
 x = GaussianDropout(rate=0.0)(x)
@@ -115,7 +115,9 @@ model = Model(inputs=[input], outputs=[features, output])
 
 Adam = tf.keras.optimizers.Adam(learning_rate=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, amsgrad=False)
 
-model.compile(optimizer=Adam, loss='categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer=Adam, 
+              loss={'features': 'binary_crossentropy', 'output': 'categorical_crossentropy'}, 
+              metrics=['accuracy'])
 
 csv_logger = tf.keras.callbacks.CSVLogger('/path/IM_v2.2_Training_Log.csv', separator=',', append=True)
 
@@ -146,6 +148,6 @@ history = model.fit(x=TrainSeq,
                     verbose=1,
                     validation_freq=1,
                     initial_epoch=0,
-                    epochs=60)
+                    epochs=90)
 
 #model.save(filepath='/path/IM_v2.2.h5', overwrite=True, include_optimizer=True, save_format='h5')
