@@ -166,7 +166,7 @@
 
     * However: 
     
-       * Initial dropout rate - 0.0.
+       * Initial dropout rate - 0.1.
 
 * #### 2.3. Training (available at the /Models/Model_Training_v1.1.py):
 
