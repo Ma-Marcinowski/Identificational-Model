@@ -88,19 +88,19 @@ def CoreNet(ix):
 
 interm = CoreNet(ix=input)
 
-x = GaussianDropout(rate=0.0)(interm) 
+x = GaussianDropout(rate=0.1)(interm) 
 x = Dense(4096, activation='relu', name='1stFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.0)(x) 
+x = GaussianDropout(rate=0.1)(x) 
 x = Dense(4096, activation='relu', name='2ndFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.0)(x) 
+x = GaussianDropout(rate=0.1)(x) 
 x = Dense(84, activation='relu', name='3rdFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.0)(x)            
+x = GaussianDropout(rate=0.1)(x)            
 output = Dense(27, activation='softmax', name='output')(x)
 
 model = Model(inputs=[input], outputs=[output])
@@ -140,6 +140,6 @@ history = model.fit(x=TrainSeq,
                     verbose=1,
                     validation_freq=1,
                     initial_epoch=0,
-                    epochs=60)
+                    epochs=90)
 
 #model.save(filepath='/path/IM_v1.1.h5', overwrite=True, include_optimizer=True, save_format='h5')
