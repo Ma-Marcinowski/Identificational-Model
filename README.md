@@ -205,6 +205,12 @@
     * Vide 1.2. Hyperparameteres.
 
     * However:
+
+       * Losses: 
+         
+         * Categorical crossentropy at the author-identification layer (softmax activation);
+         
+         * Binary crossentropy at the features-extraction layer (sigmoid activation).
     
        * Initial dropout rate - 0.0.
 
@@ -243,7 +249,13 @@
     * Vide 1.2. Hyperparameteres.
 
     * However:
-    
+
+       * Losses: 
+         
+         * Categorical crossentropy at the author-identification layer (softmax activation);
+         
+         * Binary crossentropy at the features-extraction layer (sigmoid activation).
+             
        * Initial dropout rate - 0.0.
 
 * #### 7.3. Training (available at the /Models/Model_Training_v2.1.py):
@@ -282,7 +294,13 @@
     * Vide 1.2. Hyperparameteres.
 
     * However:
-    
+
+       * Losses: 
+         
+         * Categorical crossentropy at the author-identification layer (softmax activation);
+         
+         * Binary crossentropy at the features-extraction layer (sigmoid activation).
+              
        * Initial dropout rate - 0.0.
 
 * #### 8.3. Training (available at the /Models/Model_Training_v2.2.py):
@@ -324,7 +342,13 @@
     * Vide 1.2. Hyperparameteres.
 
     * However:
-    
+
+       * Losses: 
+         
+         * Categorical crossentropy at the author-identification layer (softmax activation);
+         
+         * Binary crossentropy at the features-extraction layer (sigmoid activation).
+              
        * Initial dropout rate - 0.1.
 
 * #### 12.3. Training (available at the /Models/Model_Training_v3.0.py):
