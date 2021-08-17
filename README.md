@@ -40,7 +40,7 @@
      * Models unrestricted in terms of features extracted, but tasked with author and features identification (type v3):
      
         * Vide 12. Model v3.0 (two FC layers; tasked with author and features identification).
-        * 
+        
         * Vide 13. Model v3.1 (analogous to the v3.1, but tasks are loss weighted in favour of the author identification).
 
 * #### 0.4. Keywords:
