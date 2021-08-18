@@ -43,6 +43,10 @@
         
         * Vide 13. Model v3.1 (analogous to the v3.1, but tasks are loss weighted in favour of the author identification).
 
+     * Models unrestricted in terms of features extracted, but tasked features identification (type v4):
+     
+        * Vide 14. Model v4.0 (two FC layers; tasked with features identification).
+
 * #### 0.4. Keywords:
 
     * Computational, statistical, probabilistic; 
@@ -372,4 +376,4 @@
     | v3.0 | ??? | Features Extraction | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
     
 ### 13. Model v3.1
-    
+### 14. Model v4.0    
