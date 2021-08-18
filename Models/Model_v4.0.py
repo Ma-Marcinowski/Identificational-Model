@@ -88,15 +88,15 @@ def CoreNet(ix):
 
 interm = CoreNet(ix=input)
 
-x = GaussianDropout(rate=0.25)(interm) 
+x = GaussianDropout(rate=0.1)(interm) 
 x = Dense(4096, activation='relu', name='1stFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.25)(x) 
+x = GaussianDropout(rate=0.1)(x) 
 x = Dense(4096, activation='relu', name='2ndFCL')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
-x = GaussianDropout(rate=0.25)(x)            
+x = GaussianDropout(rate=0.1)(x)            
 features = Dense(84, activation='sigmoid', name='features')(x)
 
 model = Model(inputs=[input], outputs=[features])
