@@ -140,7 +140,7 @@
     
     | Model | Epoch | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v1.0 | ??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v1.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
 ### 2. Model v1.1
 
@@ -169,9 +169,9 @@
 
     * Results:
     
-    | Model | Epoch | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v1.0 | ??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v1.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
 ### 3. Model v1.2
 ### 4. Model v1.3
@@ -212,7 +212,7 @@
     * Results:
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v2.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
     | v2.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
     
@@ -249,7 +249,7 @@
     * Results:
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v2.1 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
     | v2.1 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
@@ -286,7 +286,7 @@
     * Results:
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v2.2 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
     | v2.2 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
@@ -327,7 +327,7 @@
     * Results:
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v3.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
     | v3.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? |
     
@@ -363,6 +363,6 @@
     * Results:
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v4.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    | v4.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v4.0 | 72 | Features Extraction | 0.0456 | 0.9894 | 0.9994 | 0.0912 | 0.9654 | 0.9938 |
+    
