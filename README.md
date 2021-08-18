@@ -150,7 +150,7 @@
 
   * However:
   
-    * There is an additional dense layer of 84 neurons in-between the 2nd and the output dense layer (analogous to the v2.1 architecture).
+    * The second FC layer consists of 84 neurons (instead of 4096; analogous to the v2.1 architecture).
 
 * #### 2.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1_Log.csv):
 
@@ -185,7 +185,9 @@
 
   * However:
   
-    * There second layer is split - among 4012 unrestricted 84 restricted neurons (in terms of features extracted) - later concatenated and fed to the output layer.
+    * There second layer is split - among 4012 unrestricted and 84 restricted neurons (in terms of features extracted) - later concatenated and fed to the output layer;
+    
+    * The above leayers are relu and sigmoid activated. 
     
 * #### 6.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.0_Log.csv):
 
@@ -222,7 +224,7 @@
 
   * However:
   
-    * The second FC layer consists of 84 neurons (instead of 4096), that are tasked with supervised features extraction (fed directly to the output layer, which identifies the authors).
+    * The second FC layer consists of 84 neurons (instead of 4096; sigmoid activated), that are tasked with supervised features extraction (fed directly to the output layer, which identifies the authors).
     
 * #### 7.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.1_Log.csv):
 
@@ -327,7 +329,40 @@
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- |
     | v3.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    | v3.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v3.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? |
     
 ### 13. Model v3.1
 ### 14. Model v4.0    
+
+* #### 14.1. Architecture (available at the /Models/Model_v4.0.py):
+
+  * Vide 1.1.1. Architecture.
+
+  * However:
+  
+    * Tasked solely with features identification - performed by an output layer of 84 neurons (sigmoid activated).
+
+* #### 14.2. Hyperparameteres (all training updates available at the /Logs/Model_v4.0_Log.csv):
+
+    * Vide 1.2. Hyperparameteres.
+
+    * However:
+
+       * Losses: 
+                  
+         * Binary crossentropy at the features-extraction layer (sigmoid activation).
+              
+       * Initial dropout rate - 0.1.
+
+* #### 14.3. Training and testing results:
+
+    * Training lasted - 90 epochs.
+    
+    * Training and testing log is available at the /Logs/Model_v4.0_Log.csv.
+
+    * Results:
+    
+    | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v4.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v4.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? |
