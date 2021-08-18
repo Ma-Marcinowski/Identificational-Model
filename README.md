@@ -93,17 +93,11 @@
 
     * Categorical Crossentropy (Authorship) / Binary Crossentropy (Features) - Loss;
     * Categorical Accuracy (Authorship) / Binary Accuracy (Features) - Acc;
-    * True Positive Rate / Sensitivity - `(TP/P)` - TPR;
-    * True Negative Rate / Specificity - `(TN/N)` - TNR;
-    * False Positive Rate - `(FP/N)` - FPR;
-    * False Negative Rate - `(FN/P)` - FNR;
-    * Positive Predictive Value - `(TP/(TP+FP))` - PPV;
-    * Negative Predictive Value - `(TN/(TN+FN))` - NPV;
     * Area under the ROC curve - AUC.
 
 ### 1. Model v1.0
 
-* #### 1.1. Architecture (available at the /Models/Model_Training_v1.0.py):
+* #### 1.1. Architecture (available at the /Models/Model_v1.0.py):
 
   * 1.1.1. Architecture based on the VGG 16, by: K. Simonyan, A. Zisserman, *Very Deep Convolutional Networks for Large-Scale Image Recognition*, arXiv:1409.1556v6 [cs.CV] 2015, pp. 1-14.
 
@@ -119,7 +113,7 @@
 
     * The last dense layer has 27 neurons.  
 
-* #### 1.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.0_Training_Log.csv):
+* #### 1.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.0_Log.csv):
 
     * Loss: Categorical Crossentropy
     
@@ -136,27 +130,21 @@
     
     * Initial dropout rate - 0.25
 
-* #### 1.3. Training (available at the /Models/Model_Training_v1.0.py):
+* #### 1.3. Training and testing results:
 
-    * Lasted - 90 epochs.
+    * Training lasted - 90 epochs.
     
-    * Training log available at the /Logs/Model_v1.0_Training_Log.csv.
+    * Training and testing log is available at the /Logs/Model_v1.0_Log.csv.
 
     * Results:
     
-    | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
-    | --- | --- | --- | --- | --- |  --- |
-    | v1.0 | 62 | 0.0170 | 1.0000 | 0.2989 | 0.9102 | 
-
-* #### 1.3. Testing (available at the /Models/Model_Testing_v1.0.py):
-
-    | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v1.0 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+    | Model | Epoch | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v1.0 | ??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
 ### 2. Model v1.1
 
-* #### 2.1. Architecture (available at the /Models/Model_Training_v1.1.py):
+* #### 2.1. Architecture (available at the /Models/Model_v1.1.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -164,7 +152,7 @@
   
     * There is an additional dense layer of 84 neurons in-between the 2nd and the output dense layer (analogous to the v2.1 architecture).
 
-* #### 2.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1_Training_Log.csv):
+* #### 2.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -172,23 +160,18 @@
     
        * Initial dropout rate - 0.1.
 
-* #### 2.3. Training (available at the /Models/Model_Training_v1.1.py):
 
-    * Lasted - ??? epochs.
+* #### 2.3. Training and testing results:
+
+    * Training lasted - ??? epochs.
     
-    * Training log available at the /Logs/Model_v1.1_Training_Log.csv.
+    * Training and testing log is available at the /Logs/Model_v1.0_Log.csv.
 
     * Results:
     
-    | Model | Epoch | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
-    | --- | --- | --- | --- | --- |  --- |
-    | v1.1 | ??? | 0.??? | 0.??? | ?.???| 0.???  | 
-
-* #### 2.3. Testing (available at the /Models/Model_Testing_v1.1.py):
-
-    | Model | Epoch | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v1.1 | ??? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+    | Model | Epoch | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v1.0 | ??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
 ### 3. Model v1.2
 ### 4. Model v1.3
@@ -196,7 +179,7 @@
 
 ### 6. Model v2.0
 
-* #### 6.1. Architecture (available at the /Models/Model_Training_v2.0.py):
+* #### 6.1. Architecture (available at the /Models/Model_v2.0.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -204,7 +187,7 @@
   
     * There second layer is split - among 4012 unrestricted 84 restricted neurons (in terms of features extracted) - later concatenated and fed to the output layer.
     
-* #### 6.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.0_Training_Log.csv):
+* #### 6.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.0_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -218,29 +201,22 @@
     
        * Initial dropout rate - 0.0.
 
-* #### 6.3. Training (available at the /Models/Model_Training_v2.0.py):
+* #### 6.3. Training and testing results:
 
-    * Lasted - ??? epochs.
+    * Training lasted - ??? epochs.
     
-    * Training log available at the /Logs/Model_v2.0_Training_Log.csv.
+    * Training and testing log is available at the /Logs/Model_v2.0_Log.csv.
 
-    * Author Identification Results:
+    * Results:
     
-    | Model | Epoch | Task | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | v2.0 | ??? | Author Identification | 0.??? | 0.??? | ?.???| 0.??? |
-    | v2.0 | ??? | Features Extraction | 0.??? | 0.??? | ?.???| 0.??? |
+    | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v2.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v2.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
     
-* #### 6.3. Testing (available at the /Models/Model_Testing_v2.0.py):
-
-    | Model | Epoch | Task | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v2.0 | ??? | Author Identification | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
-    | v2.0 | ??? | Features Extraction | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
-
 ### 7. Model v2.1
 
-* #### 7.1. Architecture (available at the /Models/Model_Training_v2.1.py):
+* #### 7.1. Architecture (available at the /Models/Model_v2.1.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -248,7 +224,7 @@
   
     * The second FC layer consists of 84 neurons (instead of 4096), that are tasked with supervised features extraction (fed directly to the output layer, which identifies the authors).
     
-* #### 7.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.1_Training_Log.csv):
+* #### 7.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.1_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -262,30 +238,22 @@
              
        * Initial dropout rate - 0.0.
 
-* #### 7.3. Training (available at the /Models/Model_Training_v2.1.py):
+* #### 7.3. Training and testing results:
 
-    * Lasted - ??? epochs.
+    * Training lasted - ??? epochs.
     
-    * Training log available at the /Logs/Model_v2.1_Training_Log.csv.
+    * Training and testing log is available at the /Logs/Model_v2.1_Log.csv.
 
     * Results:
     
-    | Model | Epoch | Task | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | v2.1 | ??? | Author Identification | 0.??? | 0.??? | ?.???| 0.??? |
-    | v2.1 | ??? | Features Extraction | 0.??? | 0.??? | ?.???| 0.??? |
-    
-* #### 7.3. Testing (available at the /Models/Model_Testing_v2.0.py):
-
-    | Model | Epoch | Task | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v2.1 | ??? | Author Identification | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
-    | v2.1 | ??? | Features Extraction | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+    | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v2.1 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v2.1 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
 ### 8. Model v2.2
 
-
-* #### 8.1. Architecture (available at the /Models/Model_Training_v2.2.py):
+* #### 8.1. Architecture (available at the /Models/Model_v2.2.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -293,7 +261,7 @@
   
     * There is and additional third FC layer of 84 neurons, tasked with supervised features extraction (fed directly to the output layer, which identifies the authors).
     
-* #### 8.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.2_Training_Log.csv):
+* #### 8.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.2_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -307,25 +275,18 @@
               
        * Initial dropout rate - 0.0.
 
-* #### 8.3. Training (available at the /Models/Model_Training_v2.2.py):
+* #### 8.3. Training and testing results:
 
-    * Lasted - ??? epochs.
+    * Training lasted - ??? epochs.
     
-    * Training log available at the /Logs/Model_v2.2_Training_Log.csv.
+    * Training and testing log is available at the /Logs/Model_v2.2_Log.csv.
 
     * Results:
     
-    | Model | Epoch | Task | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | v2.2 | ??? | Author Identification | 0.??? | 0.??? | ?.???| 0.??? |
-    | v2.2 | ??? | Features Extraction | 0.??? | 0.??? | ?.???| 0.??? |
-    
-* #### 6.3. Testing (available at the /Models/Model_Testing_v2.0.py):
-
-    | Model | Epoch | Task | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v2.2 | ??? | Author Identification | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
-    | v2.2 | ??? | Features Extraction | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+    | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v2.2 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v2.2 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
 ### 9. Model v2.3
 ### 10. Model v2.4
@@ -333,7 +294,7 @@
 
 ### 12. Model v3.0
 
-* #### 12.1. Architecture (available at the /Models/Model_Training_v3.0.py):
+* #### 12.1. Architecture (available at the /Models/Model_v3.0.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -341,7 +302,7 @@
   
     * There are two output layers, one tasked with author identification (27 neurons, softmax activation), and the other tasked with features identification (84 neurons, sigmoid activation).
 
-* #### 12.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.0_Training_Log.csv):
+* #### 12.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.0_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -355,25 +316,18 @@
               
        * Initial dropout rate - 0.1.
 
-* #### 12.3. Training (available at the /Models/Model_Training_v3.0.py):
+* #### 12.3. Training and testing results:
 
-    * Lasted - ??? epochs.
+    * Training lasted - ??? epochs.
     
-    * Training log available at the /Logs/Model_v3.0_Training_Log.csv.
+    * Training and testing log is available at the /Logs/Model_v3.0_Log.csv.
 
     * Results:
     
-    | Model | Epoch | Task | Training Loss | Training Accuracy | Validation Loss | Validation Accuracy |
-    | --- | --- | --- | --- | --- | --- | --- |
-    | v3.0 | ??? | Author Identification | 0.??? | 0.??? | ?.???| 0.??? |
-    | v3.0 | ??? | Features Extraction | 0.??? | 0.??? | ?.???| 0.??? |
-    
-* #### 12.3. Testing (available at the /Models/Model_Testing_v2.0.py):
-
-    | Model | Epoch | Task | Loss | Acc | TPR | TNR | FPR | FNR | PPV | NPV | AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v3.0 | ??? | Author Identification | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
-    | v3.0 | ??? | Features Extraction | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? | 0.???? |
+    | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v3.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v3.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
     
 ### 13. Model v3.1
 ### 14. Model v4.0    
