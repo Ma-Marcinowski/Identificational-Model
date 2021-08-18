@@ -139,7 +139,7 @@
     * Results:
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v1.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
 ### 2. Model v1.1
