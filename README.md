@@ -91,8 +91,8 @@
 
   * 0.5.6. Basic evaluation metrics:
 
-    * Categorical Crossentropy - Loss;
-    * Accuracy - Acc;
+    * Categorical Crossentropy (Authorship) / Binary Crossentropy (Features) - Loss;
+    * Accuracy (Authorship) / Binary Accuracy (Features) - Acc;
     * True Positive Rate / Sensitivity - `(TP/P)` - TPR;
     * True Negative Rate / Specificity - `(TN/N)` - TNR;
     * False Positive Rate - `(FP/N)` - FPR;
