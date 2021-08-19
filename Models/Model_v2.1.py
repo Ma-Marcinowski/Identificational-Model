@@ -99,10 +99,6 @@ x = Dense(4096, activation='relu', name='1stFCL')(x)
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
 x = GaussianDropout(rate=0.0)(x) 
-x = Dense(4096, activation='relu', name='2ndFCL')(x) 
-x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
-
-x = GaussianDropout(rate=0.0)(x) 
 features = Dense(84, activation='sigmoid', name='features')(x) 
 x = BatchNormalization(axis=-1, scale=True, trainable=True)(features)
 
