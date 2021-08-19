@@ -15,13 +15,13 @@
      
          * Vide 1. Model v1.0 (two FC layers);
      
-         * Vide 2. Model v1.1 (two FC layers, but analogous in size to the v2.1);
+         * Vide 2. Model v1.1 (two FC layers, but analogous in size and activation to the v2.1);
 
-         * Vide 3. Model v1.2 (three FC layers, but analogous in size to the v2.2);
+         * Vide 3. Model v1.2 (three FC layers, but analogous in size and activation to the v2.2);
 
-         * Vide 4. Model v1.3 (three FC layers, but analogous in size to the v2.3);
+         * Vide 4. Model v1.3 (three FC layers, but analogous in size and activation to the v2.3);
 
-         * Vide 5. Model v1.4 (three FC layers, but analogous in size to the v2.4);
+         * Vide 5. Model v1.4 (three FC layers, but analogous in size and activation to the v2.4);
          
      * Models restricted by supervised features extraction, tasked with author identification (type v2):
 
@@ -140,7 +140,7 @@
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v1.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v1.0 | 62 | Author Identification | 0.0170 | 1.0000 | 1.0000 | 0.2989 | 0.9102 | 0.9904 | 
 
 ### 2. Model v1.1
 
@@ -150,7 +150,7 @@
 
   * However:
   
-    * The second FC layer consists of 84 neurons (instead of 4096; analogous to the v2.1 architecture).
+    * The second FC layer consists of 84 neurons with sigmoid activation (instead of 4096 with relu activation; analogous to the v2.1 architecture).
 
 * #### 2.2. Hyperparameteres (all training updates available at the /Logs/Model_v1.1_Log.csv):
 
@@ -159,7 +159,6 @@
     * However: 
     
        * Initial dropout rate - 0.1.
-
 
 * #### 2.3. Training and testing results:
 
@@ -171,7 +170,7 @@
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v1.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v1.1 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
 ### 3. Model v1.2
 ### 4. Model v1.3
