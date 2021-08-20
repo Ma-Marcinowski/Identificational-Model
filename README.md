@@ -313,13 +313,13 @@
          
          * Categorical crossentropy at the author-identification layer (softmax activation);
          
-         * Binary crossentropy at the features-extraction layer (sigmoid activation).
+         * Binary crossentropy at the features-identification layer (sigmoid activation).
               
        * Initial dropout rate - 0.1.
 
 * #### 12.3. Training and testing results:
 
-    * Training lasted - ??? epochs.
+    * Training lasted - 90 epochs.
     
     * Training and testing log is available at the /Logs/Model_v3.0_Log.csv.
 
@@ -327,10 +327,46 @@
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v3.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    | v3.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? |
-    
+    | v3.0 | 37 | Author Identification | 0.2562 | 0.9203 | 0.9984 | 0.3891 | 0.8568 | 0.9970 | 
+    | v3.0 | 37 | Features Identification | 0.2173 | 0.9133 | 0.9729 | 0.1936 | 0.9262 | 0.9806 | 
+
 ### 13. Model v3.1
+
+* #### 13.1. Architecture (available at the /Models/Model_v3.1.py):
+
+  * Vide 12.3. Architecture (Model v3.0).
+  
+  * However:
+  
+    * Classification tasks are weighted (author identification loss is twice in weight of the features identification loss).
+
+* #### 12.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.1_Log.csv):
+
+    * Vide 1.2. Hyperparameteres.
+
+    * However:
+
+       * Losses: 
+         
+         * Categorical crossentropy at the author-identification layer (softmax activation);
+         
+         * Binary crossentropy at the features-identification layer (sigmoid activation).
+              
+       * Initial dropout rate - 0.1.
+
+* #### 12.3. Training and testing results:
+
+    * Training lasted - 90 epochs.
+    
+    * Training and testing log is available at the /Logs/Model_v3.1_Log.csv.
+
+    * Results:
+    
+    | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    | v3.1 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v3.1 | ??? | Features Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+
 ### 14. Model v4.0    
 
 * #### 14.1. Architecture (available at the /Models/Model_v4.0.py):
@@ -363,5 +399,5 @@
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v4.0 | 72 | Features Extraction | 0.0456 | 0.9894 | 0.9994 | 0.0912 | 0.9654 | 0.9938 |
+    | v4.0 | 72 | Features Identification | 0.0456 | 0.9894 | 0.9994 | 0.0912 | 0.9654 | 0.9938 |
     
