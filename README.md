@@ -338,7 +338,7 @@
   
   * However:
   
-    * Classification tasks are weighted (author identification loss is twice in weight of the features identification loss).
+    * Classification tasks are weighted in terms of loss, whter the task of author identification is twice in weight of the features identification.
 
 * #### 12.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.1_Log.csv):
 
