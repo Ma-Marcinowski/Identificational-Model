@@ -364,9 +364,9 @@
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v3.1 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    | v3.1 | ??? | Features Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-
+    | v3.1 | 55 | Author Identification | 0.0503 | 0.9948 | 1.0000 | 0.3430 | 0.8956 | 0.9969 | 
+    | v3.1 | 55 | Features Identification | 0.1571 | 0.9448 | 0.9886 | 0.1503 | 0.9477 | 0.9888 |  
+    	
 ### 14. Model v4.0    
 
 * #### 14.1. Architecture (available at the /Models/Model_v4.0.py):
