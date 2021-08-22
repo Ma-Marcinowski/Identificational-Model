@@ -231,9 +231,9 @@
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v2.1 | 82 | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    | v2.1 | 82 | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-
+    | v2.1 | 82 | Author Identification | 0.1166 | 1.0000 | 1.0000 | ***0.2422*** | ***0.9660*** | ***0.9998*** | 
+    | v2.1 | 82 | Features Extraction | 0.2401 | 0.8322 | 0.9601 | 0.2477 | 0.8430 | 0.9602 | 
+    
 ### 5. Model v3.0
 
 * #### 5.1. Architecture (available at the /Models/Model_v3.0.py):
