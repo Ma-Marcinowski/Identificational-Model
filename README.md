@@ -186,7 +186,7 @@
   
     * There second layer is split - among 4012 unrestricted and 84 restricted neurons (in terms of features extracted) - later concatenated and fed to the output layer;
     
-    * The above leayers are relu and sigmoid activated. 
+    * The above leayers are relu and sigmoid activated (batch normalization applied after concatenation). 
     
 * #### 6.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.0_Log.csv):
 
@@ -223,7 +223,7 @@
 
   * However:
   
-    * The second FC layer consists of 84 neurons (instead of 4096; sigmoid activated), that are tasked with supervised features extraction (fed directly to the output layer, which identifies the authors).
+    * The second FC layer consists of 84 neurons (instead of 4096; sigmoid activated, no batch normalization), that are tasked with supervised features extraction, that are fed directly to the output layer, which identifies the authors.
     
 * #### 7.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.1_Log.csv):
 
