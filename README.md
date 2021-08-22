@@ -204,7 +204,7 @@
 
 * #### 6.3. Training and testing results:
 
-    * Training lasted - ??? epochs.
+    * Training lasted - 90 epochs.
     
     * Training and testing log is available at the /Logs/Model_v2.0_Log.csv.
 
@@ -212,9 +212,9 @@
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v2.0 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    | v2.0 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    
+    | v2.0 | 68 | Author Identification | 0.1266 | 0.9738 | 0.9999 | 0.4265 | 0.8398 | 0.9965 | 
+    | v2.0 | 68 | Features Extraction | 0.1426 | 0.9431 | 0.9888 | 0.1534 | 0.9353 | 0.9852 | 
+
 ### 7. Model v2.1
 
 * #### 7.1. Architecture (available at the /Models/Model_v2.1.py):
