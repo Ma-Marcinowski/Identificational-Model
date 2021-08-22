@@ -15,27 +15,13 @@
      
          * Vide 1. Model v1.0 (two FC layers);
      
-         * Vide 2. Model v1.1 (two FC layers, but analogous in size and activation to the v2.1);
-
-         * Vide 3. Model v1.2 (three FC layers, but analogous in size and activation to the v2.2);
-
-         * Vide 4. Model v1.3 (three FC layers, but analogous in size and activation to the v2.3);
-
-         * Vide 5. Model v1.4 (three FC layers, but analogous in size and activation to the v2.4);
+         * Vide 2. Model v1.1 (two FC layers, but analogous in size and activation to the v2.1).
          
      * Models restricted by supervised features extraction, tasked with author identification (type v2):
 
         * Vide 6. Model v2.0 (two FC layers, the second one only partially restricted);
 
-        * Vide 7. Model v2.1 (two FC layers, the second one restricted);
-     
-        * Vide 8. Model v2.2 (three FC layers, the third one restricted);
-
-        * Vide 9. Model v2.3 (three FC layers, the first and third one restricted);
-
-        * Vide 10. Model v2.4 (three FC layers, all restricted);
-
-        * Vide 11. Model v2.5 (analogous to the v2.???, but tasks and restrictions are weighted)
+        * Vide 7. Model v2.1 (two FC layers, the second one restricted).
 
      * Models unrestricted in terms of features extracted, but tasked with author and features identification (type v3):
      
@@ -172,13 +158,9 @@
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
     | v1.1 | 37 | Author Identification | 0.2255 |0.9665 | 0.9998 | 0.3695 | 0.9005 | 0.9977 |
 
-### 3. Model v1.2
-### 4. Model v1.3
-### 5. Model v1.4
+### 3. Model v2.0
 
-### 6. Model v2.0
-
-* #### 6.1. Architecture (available at the /Models/Model_v2.0.py):
+* #### 3.1. Architecture (available at the /Models/Model_v2.0.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -188,7 +170,7 @@
     
     * The above leayers are relu and sigmoid activated (batch normalization applied after concatenation). 
     
-* #### 6.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.0_Log.csv):
+* #### 3.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.0_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -202,7 +184,7 @@
     
        * Initial dropout rate - 0.0.
 
-* #### 6.3. Training and testing results:
+* #### 3.3. Training and testing results:
 
     * Training lasted - 90 epochs.
     
@@ -215,9 +197,9 @@
     | v2.0 | 68 | Author Identification | 0.1266 | 0.9738 | 0.9999 | 0.4265 | 0.8398 | 0.9965 | 
     | v2.0 | 68 | Features Extraction | 0.1426 | 0.9431 | 0.9888 | 0.1534 | 0.9353 | 0.9852 | 
 
-### 7. Model v2.1
+### 4. Model v2.1
 
-* #### 7.1. Architecture (available at the /Models/Model_v2.1.py):
+* #### 4.1. Architecture (available at the /Models/Model_v2.1.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -225,7 +207,7 @@
   
     * The second FC layer consists of 84 neurons (instead of 4096; sigmoid activated, no batch normalization), that are tasked with supervised features extraction, that are fed directly to the output layer, which identifies the authors.
     
-* #### 7.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.1_Log.csv):
+* #### 4.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.1_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -239,9 +221,9 @@
              
        * Initial dropout rate - 0.0.
 
-* #### 7.3. Training and testing results:
+* #### 4.3. Training and testing results:
 
-    * Training lasted - ??? epochs.
+    * Training lasted - 90 epochs.
     
     * Training and testing log is available at the /Logs/Model_v2.1_Log.csv.
 
@@ -249,53 +231,12 @@
     
     | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v2.1 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    | v2.1 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v2.1 | 82 | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
+    | v2.1 | 82 | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
 
-### 8. Model v2.2
+### 5. Model v3.0
 
-* #### 8.1. Architecture (available at the /Models/Model_v2.2.py):
-
-  * Vide 1.1.1. Architecture.
-
-  * However:
-  
-    * There is and additional third FC layer of 84 neurons, tasked with supervised features extraction (fed directly to the output layer, which identifies the authors).
-    
-* #### 8.2. Hyperparameteres (all training updates available at the /Logs/Model_v2.2_Log.csv):
-
-    * Vide 1.2. Hyperparameteres.
-
-    * However:
-
-       * Losses: 
-         
-         * Categorical crossentropy at the author-identification layer (softmax activation);
-         
-         * Binary crossentropy at the features-extraction layer (sigmoid activation).
-              
-       * Initial dropout rate - 0.0.
-
-* #### 8.3. Training and testing results:
-
-    * Training lasted - ??? epochs.
-    
-    * Training and testing log is available at the /Logs/Model_v2.2_Log.csv.
-
-    * Results:
-    
-    | Model | Epoch | Task | Training Loss | Training Accuracy | Training AUC | Validation Loss | Validation Accuracy | Validation AUC |
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-    | v2.2 | ??? | Author Identification | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-    | v2.2 | ??? | Features Extraction | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 0.??? | 
-
-### 9. Model v2.3
-### 10. Model v2.4
-### 11. Model v2.5
-
-### 12. Model v3.0
-
-* #### 12.1. Architecture (available at the /Models/Model_v3.0.py):
+* #### 5.1. Architecture (available at the /Models/Model_v3.0.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -303,7 +244,7 @@
   
     * There are two output layers, one tasked with author identification (27 neurons, softmax activation), and the other tasked with features identification (84 neurons, sigmoid activation).
 
-* #### 12.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.0_Log.csv):
+* #### 5.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.0_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -317,7 +258,7 @@
               
        * Initial dropout rate - 0.1.
 
-* #### 12.3. Training and testing results:
+* #### 5.3. Training and testing results:
 
     * Training lasted - 90 epochs.
     
@@ -330,17 +271,17 @@
     | v3.0 | 37 | Author Identification | 0.2562 | 0.9203 | 0.9984 | 0.3891 | 0.8568 | 0.9970 | 
     | v3.0 | 37 | Features Identification | 0.2173 | 0.9133 | 0.9729 | 0.1936 | 0.9262 | 0.9806 | 
 
-### 13. Model v3.1
+### 6. Model v3.1
 
-* #### 13.1. Architecture (available at the /Models/Model_v3.1.py):
+* #### 6.1. Architecture (available at the /Models/Model_v3.1.py):
 
-  * Vide 12.3. Architecture (Model v3.0).
+  * Vide 5.3. Architecture (Model v3.0).
   
   * However:
   
     * Classification tasks are weighted in terms of loss, where the task of author identification is twice in weight of the features identification.
 
-* #### 12.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.1_Log.csv):
+* #### 6.2. Hyperparameteres (all training updates available at the /Logs/Model_v3.1_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -354,7 +295,7 @@
               
        * Initial dropout rate - 0.1.
 
-* #### 12.3. Training and testing results:
+* #### 6.3. Training and testing results:
 
     * Training lasted - 90 epochs.
     
@@ -367,9 +308,9 @@
     | v3.1 | 55 | Author Identification | 0.0503 | 0.9948 | 1.0000 | 0.3430 | 0.8956 | 0.9969 | 
     | v3.1 | 55 | Features Identification | 0.1571 | 0.9448 | 0.9886 | 0.1503 | 0.9477 | 0.9888 |  
     	
-### 14. Model v4.0    
+### 7. Model v4.0    
 
-* #### 14.1. Architecture (available at the /Models/Model_v4.0.py):
+* #### 7.1. Architecture (available at the /Models/Model_v4.0.py):
 
   * Vide 1.1.1. Architecture.
 
@@ -377,7 +318,7 @@
   
     * Tasked solely with features identification - performed by an output layer of 84 neurons (sigmoid activated).
 
-* #### 14.2. Hyperparameteres (all training updates available at the /Logs/Model_v4.0_Log.csv):
+* #### 7.2. Hyperparameteres (all training updates available at the /Logs/Model_v4.0_Log.csv):
 
     * Vide 1.2. Hyperparameteres.
 
@@ -389,7 +330,7 @@
               
        * Initial dropout rate - 0.1.
 
-* #### 14.3. Training and testing results:
+* #### 7.3. Training and testing results:
 
     * Training lasted - 90 epochs.
     
