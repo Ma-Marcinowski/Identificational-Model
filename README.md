@@ -120,7 +120,7 @@
 
     * Training lasted - 90 epochs.
     
-    * Training and testing log is available at the /Logs/Model_v1.0_Log.csv.
+    * Training and testing log is available at the /Logs/Model_v1.0_Log.csv (however, the AUC was not recorded at the time of training and validation, but later calculated for the best performing model).
 
     * Results:
     
