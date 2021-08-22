@@ -100,9 +100,8 @@ x = BatchNormalization(axis=-1, scale=True, trainable=True)(x)
 
 x = GaussianDropout(rate=0.0)(x) 
 features = Dense(84, activation='sigmoid', name='features')(x) 
-x = BatchNormalization(axis=-1, scale=True, trainable=True)(features)
 
-x = GaussianDropout(rate=0.0)(x)
+x = GaussianDropout(rate=0.0)(features)
 authors = Dense(27, activation='softmax', name='authors')(x)
 
 model = Model(inputs=[input], outputs=[authors, features])
