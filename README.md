@@ -81,6 +81,14 @@
     * Categorical Accuracy (Authorship) / Binary Accuracy (Features) - Acc;
     * Area under the ROC curve - AUC.
 
+* #### 0.6. Implementation
+   
+  * Programming language: Python 3.
+   
+  * API: TensorFlow Core v2.6.0 (stable).
+   
+  * Execution: Google Colaboratory.
+   
 ### 1. Model v1.0
 
 * #### 1.1. Architecture (available at the /Models/Model_v1.0.py):
