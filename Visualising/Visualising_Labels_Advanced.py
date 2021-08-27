@@ -40,11 +40,19 @@ def GradientAscent(image, label_index, sub_model,
         grad_stdv = tf.math.add(tf.math.reduce_std(filter_gradient), 1e-9)
         normalized_gradient = tf.math.divide(grad_diff, grad_stdv)
         
-        blurred_gradient = tfa.image.gaussian_label2d(image=normalized_gradient, 
-                                                      label_shape=[256, 256], 
-                                                      sigma=sigma, 
-                                                      padding='CONSTANT', 
-                                                      constant_values=0.0)
+        if sigma > 0.5:
+
+            kernel_size = (np.round((sigma * 3), 0)).astype(np.int32)
+
+        else:
+
+            kernel_size = 2      
+            
+        blurred_gradient = tfa.image.gaussian_filter2d(image=normalized_gradient, 
+                                                       filter_shape=[kernel_size, kernel_size], 
+                                                       sigma=sigma, 
+                                                       padding='CONSTANT', 
+                                                       constant_values=0.0)
         
         sigma = sigma - sigma_step_rate
 
