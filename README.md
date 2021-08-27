@@ -97,13 +97,13 @@
 
   * 1.1.2. However:
   
-    * Batch normalization layers are added among the convolutional and dese layers;
+    * Batch normalization layers are added among the convolutional and dense layers;
 
     * Dilation of 2 is utilized at convolutional layers;
     
     * Global Average Pooling layer is applied instead of the last max-pooling layer;
 
-    * Dropout layers are supercedeing all dense layers;
+    * Dropout layers are superseding all dense layers;
 
     * The last dense layer has 27 neurons.  
 
